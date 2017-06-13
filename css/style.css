@@ -217,7 +217,22 @@ td {
     background-color: powderblue;
     color: black;
     border: 1px solid cadetblue;
+    text-decoration: none;
 }
+
+
+td a {
+    
+    text-decoration: none;
+    color: #9d9d9d;
+}
+
+td a:hover {
+    
+    text-decoration: none;
+    color: #9d9d9d;
+}
+
 
 .nazivfilma {
 
