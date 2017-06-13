@@ -1,3 +1,5 @@
+<?php session_start() ?>
+
 <!DOCTYPE html>
 <html>
 <?php include 'headpart.php'; ?>
@@ -37,7 +39,7 @@ $conn = mysqli_connect($server, $username, $password) or die (mysqli_error($conn
 mysqli_set_charset($conn, "utf8");
 $baza=mysqli_select_db($conn, $database);
 
-    $query="select * from filmovi where id= ".$_GET['details']."";
+    $query="select * from filmovi where filmid='".$_GET['details']."'";
     $result=mysqli_query($conn, $query);
     while ($row=mysqli_fetch_assoc($result)) { ?>
     

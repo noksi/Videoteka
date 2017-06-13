@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
 <?php include 'headpart.php'; ?>
@@ -26,23 +28,27 @@ $baza=mysqli_select_db($conn, $database);
 
 if (isset($_POST['trazislovo'])){
     
-    $query="select * from filmovi where naziv_filma like '"
-            .$_POST['slova']."%' or naziv_filma like '"
-            .strtoupper($_POST['slova'])."%'";
+    $query="select * from userkolekcija inner join filmovi on filmovi.filmid=userkolekcija.film_id where user_id='".$_SESSION['userid']."' and naziv_filma like '".$_POST['slova']."%'";
+    $result=mysqli_query($conn, $query);
+    while ($row=mysqli_fetch_assoc($result));
     
 $result=mysqli_query($conn, $query);
     while ($row=mysqli_fetch_assoc($result)) { ?>
     
     
    <tr class="tr">
-        <td><?php echo $row['id']; ?></td>
+        <td><?php echo $row['filmid']; ?></td>
 	<td><?php echo $row['naziv_filma']; ?></td>
 	<td><?php echo $row['godina']; ?></td>
 	<td><?php echo $row['zanr'];?></td>
 	<td><?php echo $row['redatelj'];?></td>
 	<td><img src="data:image/jpeg;base64,<?php echo base64_encode($row['slike'] ); ?>" height="100" width="85"></td>
-        <td><a href='edit.php?idedit='><input type='submit' name='edit' class="btn btn-default butoni" value='Promjeni'></a><br>
-            <a href='php/remove.php?idremove=<?php echo $row['id'];?>'><input type='submit' name='remove' class="btn btn-default butoni" value='Ukloni'></a>
+        
+        <td>
+            <a href="details.php?details=<?php echo $row['filmid']; ?>">
+           <input type='submit' name='details' class="btn btn-default butoni" value='Detalji'></a><br>
+            <a href='edit.php?idedit=<?php echo $row2['filmid']; ?>'><input type='submit' name='edit' class="btn btn-default butoni" value='Promjeni'></a><br>
+            <a href='php/remove.php?idremove=<?php echo $row['filmid'];?>'><input type='submit' name='remove' class="btn btn-default butoni" value='Ukloni'></a>
         </td>
 
  
@@ -51,20 +57,23 @@ $result=mysqli_query($conn, $query);
 <?php }} //end while endif trazislovo
 
 elseif (isset($_POST['trazilica'])) {
-    $query2="select * from filmovi where naziv_filma like '%".$_POST['filmovi']."%'";
+    $query2="select * from userkolekcija inner join filmovi on filmovi.filmid=userkolekcija.film_id where user_id='".$_SESSION['userid']."'and naziv_filma like '%".$_POST['filmovi']."%'";
 $result2=mysqli_query($conn, $query2);
     while ($row2=mysqli_fetch_assoc($result2)) { ?>
     
     
     <tr class="tr">
-        <td><?php echo $row2['id']; ?></td>
+        <td><?php echo $row2['filmid']; ?></td>
 	<td><?php echo $row2['naziv_filma']; ?></td>
 	<td><?php echo $row2['godina']; ?></td>
 	<td><?php echo $row2['zanr'];?></td>
 	<td><?php echo $row2['redatelj'];?></td>
 	<td><img src="data:image/jpeg;base64,<?php echo base64_encode($row2['slike'] ); ?>" height="100" width="85"></td>
-        <td><a href='edit.php?idedit=<?php echo $row2['id']; ?>'><input type='submit' name='edit' class="btn btn-default butoni" value='Promjeni'></a><br>
-            <a href='php/remove.php?idedit=<?php echo $row2['id']; ?>'><input type='submit' name='remove' class="btn btn-default butoni" value='Ukloni'></a>
+        <td>
+            <a href="details.php?details=<?php echo $row['filmid']; ?>">
+           <input type='submit' name='details' class="btn btn-default butoni" value='Detalji'></a><br>
+            <a href='edit.php?idedit=<?php echo $row2['filmid']; ?>'><input type='submit' name='edit' class="btn btn-default butoni" value='Promjeni'></a><br>
+            <a href='php/remove.php?idedit=<?php echo $row2['filmid']; ?>'><input type='submit' name='remove' class="btn btn-default butoni" value='Ukloni'></a>
         </td>
 
  

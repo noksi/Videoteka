@@ -1,10 +1,17 @@
+
+
 <div class="flex-container">
 
 <div class="korisni2">
 
+    <form class="signup" method="POST" action="php/logout.php">
+    <input type="submit" class="btn btn-default butoni" value="Odjavite se" name="logout">
+    </form><br>
+    
   <form class="signup" action="php/create.php" method="post" enctype="multipart/form-data">
   
-  <span>DODAJ FILM</span> <br><br>
+      
+      <span><strong>Dodaj Film</strong></span> <br><br>
 
     <span>Naziv filma:</span><br>
       <input type="text" class="input form-control2" name="naziv" style="color: black !important;" placeholder="Upiši naziv filma"><br><br>
@@ -36,7 +43,7 @@
 
 
 
-      <input type="submit" name="add" class="btn btn-default butoni" value="Dodaj film u listu"><br>
+      <input type="submit" name="add" class="btn btn-default butoni" value="Dodaj film"><br>
     
       
       
