@@ -5,19 +5,19 @@
 <div class="korisni2">
 
     <form class="signup" method="POST" action="php/logout.php">
-    <input type="submit" class="btn btn-default butoni" value="Odjavite se" name="logout">
+    <input type="submit" class="btn btn-default butoni" value="Odjavite se [<?php echo $_SESSION['username']; ?>]" name="logout">
     </form><br>
     
   <form class="signup" action="php/create.php" method="post" enctype="multipart/form-data">
   
       
-      <span><strong>Dodaj Film</strong></span> <br><br>
+      <span><strong>Dodaj film u bazu podataka</strong></span> <br><br>
 
     <span>Naziv filma:</span><br>
-      <input type="text" class="input form-control2" name="naziv" style="color: black !important;" placeholder="Upiši naziv filma"><br><br>
+      <input type="text" class="input form-control2" name="naziv" style="color: black !important;" placeholder="Upiši naziv filma"><br>
 
       <span>Godina izdavanja:</span><br>
-      <input type="number" class="form-control2" name="godina" style="color: black !important" placeholder="Upisi godinu"><br><br>
+      <input type="number" class="form-control2" name="godina" style="color: black !important" placeholder="Upisi godinu"><br>
 
       <span>Žanr:</span><br>
       <select class="form-control2" name="zanrovi">
@@ -30,14 +30,14 @@
         <option>Adventure</option>
         <option>Romance</option>
         <option>Crime</option>
-      </select><br><br>
+      </select><br>
 
       <span>Redatelj:</span><br>
-      <input type="text" class="input form-control2" name="redatelj" style="color: black !important;" placeholder="Upiši naziv redatelja"><br><br>
+      <input type="text" class="input form-control2" name="redatelj" style="color: black !important;" placeholder="Upiši naziv redatelja"><br>
 
       <span>Odaberite cover:</span>
       <input type="file" class="file" name="slika" id="slika">
-      <label for="slika">Kliknite ovdje za odabir</label><br><br><br>
+      <label for="slika">Kliknite ovdje za odabir</label><br>
 
 
 

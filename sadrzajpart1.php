@@ -5,7 +5,7 @@
  	
 <tr>
 	
-<th>ID</th>
+
 <th class="tha"><a href='sortfilmovi.php'>Naziv filma</a></th>
 <th class ="tha"><a href="sortgodina.php">Godina</a></th>
 <th class ="tha"><a href="sortzanrovi.php">Žanr</a></th>

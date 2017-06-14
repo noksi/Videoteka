@@ -47,3 +47,34 @@
  
 	
  	</div> <!--mojnavbar-->
+        
+        <div class="mojnavbar2">
+
+ <form class="mojnavbarforma2" method="POST" action="search.php">
+ 	<div class="navbar-title">Tražite film po žanru:</div>
+        
+        <select class="form-control3" name="zanr">
+            
+        <option>Action</option>
+      	<option>Comedy</option>
+      	<option>Drama</option>
+      	<option>Horor</option>
+      	<option>SF-Fantasy</option>
+        <option>Akcija-SF</option>
+        <option>Adventure</option>
+        <option>Romance</option>
+        <option>Crime</option>
+        
+        </select>
+        
+<input type="submit" name="trazizanr" class="btn btn-default butonnavbar2" value="Traži" style="width: 13.7%">
+
+
+<div class="navbar-title navbar-title2">Upišite godinu izdavanja:</div> 
+
+<input type="number" name="godina" placeholder="Godina izdavanja filma" class="form-control3 nazivfilma">
+<input type="submit" name="trazigodina" class="btn btn-default butonnavbar2" value="Traži">
+ </form>
+ 
+	
+ 	</div> <!--mojnavbar2-->

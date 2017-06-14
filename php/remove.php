@@ -10,7 +10,7 @@ include 'dbcon.php';
         
         $id=$_GET['idremove'];
     
-    $query="DELETE from filmovi where id='".$id."'";
+    $query="DELETE from userkolekcija where film_id='".$id."'";
     $ispis=mysqli_query($conn, $query);
     
     if ($ispis) {header('Location: ../index.php');}

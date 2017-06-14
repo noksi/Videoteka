@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php session_Start(); ?>
 
 <!DOCTYPE html>
 <html>
@@ -36,8 +36,9 @@ $result=mysqli_query($conn, $query);
     while ($row=mysqli_fetch_assoc($result)) { ?>
     
     
+    
    <tr class="tr">
-        <td><?php echo $row['filmid']; ?></td>
+        
 	<td><?php echo $row['naziv_filma']; ?></td>
 	<td><?php echo $row['godina']; ?></td>
 	<td><?php echo $row['zanr'];?></td>
@@ -47,8 +48,8 @@ $result=mysqli_query($conn, $query);
         <td>
             <a href="details.php?details=<?php echo $row['filmid']; ?>">
            <input type='submit' name='details' class="btn btn-default butoni" value='Detalji'></a><br>
-            <a href='edit.php?idedit=<?php echo $row2['filmid']; ?>'><input type='submit' name='edit' class="btn btn-default butoni" value='Promjeni'></a><br>
-            <a href='php/remove.php?idremove=<?php echo $row['filmid'];?>'><input type='submit' name='remove' class="btn btn-default butoni" value='Ukloni'></a>
+            <a href='edit.php?idedit=<?php echo $row['filmid']; ?>'><input type='submit' name='edit' class="btn btn-default butoni" value='Promjeni'></a><br>
+            <a href='php/remove.php?idremove=<?php echo $row['filmid']; ?>'><input type='submit' name='remove' class="btn btn-default butoni" value='Ukloni'></a>
         </td>
 
  
@@ -61,19 +62,20 @@ elseif (isset($_POST['trazilica'])) {
 $result2=mysqli_query($conn, $query2);
     while ($row2=mysqli_fetch_assoc($result2)) { ?>
     
-    
+   
+
     <tr class="tr">
-        <td><?php echo $row2['filmid']; ?></td>
+        
 	<td><?php echo $row2['naziv_filma']; ?></td>
 	<td><?php echo $row2['godina']; ?></td>
 	<td><?php echo $row2['zanr'];?></td>
 	<td><?php echo $row2['redatelj'];?></td>
 	<td><img src="data:image/jpeg;base64,<?php echo base64_encode($row2['slike'] ); ?>" height="100" width="85"></td>
         <td>
-            <a href="details.php?details=<?php echo $row['filmid']; ?>">
+            <a href='details.php?details=<?php echo $row2['filmid']; ?>'>
            <input type='submit' name='details' class="btn btn-default butoni" value='Detalji'></a><br>
             <a href='edit.php?idedit=<?php echo $row2['filmid']; ?>'><input type='submit' name='edit' class="btn btn-default butoni" value='Promjeni'></a><br>
-            <a href='php/remove.php?idedit=<?php echo $row2['filmid']; ?>'><input type='submit' name='remove' class="btn btn-default butoni" value='Ukloni'></a>
+            <a href='php/remove.php?idremove=<?php echo $row2['filmid']; ?>'><input type='submit' name='remove' class="btn btn-default butoni" value='Ukloni'></a>
         </td>
 
  
@@ -81,6 +83,61 @@ $result2=mysqli_query($conn, $query2);
 
 <?php }} // end while i elseif trazilica
 
+elseif (isset($_POST['trazizanr'])) {
+    $query3="select * from userkolekcija inner join filmovi on filmovi.filmid=userkolekcija.film_id where user_id='".$_SESSION['userid']."' and zanr='".$_POST['zanr']."'";
+$result3=mysqli_query($conn, $query3);
+    while ($row3=mysqli_fetch_assoc($result3)) { ?>
+    
+
+    
+    <tr class="tr">
+        
+	<td><?php echo $row3['naziv_filma']; ?></td>
+	<td><?php echo $row3['godina']; ?></td>
+	<td><?php echo $row3['zanr'];?></td>
+	<td><?php echo $row3['redatelj'];?></td>
+	<td><img src="data:image/jpeg;base64,<?php echo base64_encode($row3['slike'] ); ?>" height="100" width="85"></td>
+        <td>
+            <a href='details.php?details=<?php echo $row3['filmid']; ?>'>
+           <input type='submit' name='details' class="btn btn-default butoni" value='Detalji'></a><br>
+            <a href='edit.php?idedit=<?php echo $row3['filmid']; ?>'><input type='submit' name='edit' class="btn btn-default butoni" value='Promjeni'></a><br>
+            <a href='php/remove.php?idremove=<?php echo $row3['filmid']; ?>'><input type='submit' name='remove' class="btn btn-default butoni" value='Ukloni'></a>
+        </td>
+
+ 
+</tr>
+
+<?php }} // end while i elseif trazizanr
+
+elseif (isset($_POST['trazigodina'])) {
+    $query4="select * from userkolekcija inner join filmovi on filmovi.filmid=userkolekcija.film_id where user_id='".$_SESSION['userid']."' and godina='".$_POST['godina']."'";
+$result4=mysqli_query($conn, $query4);
+    while ($row4=mysqli_fetch_assoc($result4)) { ?>
+    
+
+    
+    <tr class="tr">
+        
+	<td><?php echo $row4['naziv_filma']; ?></td>
+	<td><?php echo $row4['godina']; ?></td>
+	<td><?php echo $row4['zanr'];?></td>
+	<td><?php echo $row4['redatelj'];?></td>
+	<td><img src="data:image/jpeg;base64,<?php echo base64_encode($row4['slike'] ); ?>" height="100" width="85"></td>
+        <td>
+            <a href='details.php?details=<?php echo $row4['filmid']; ?>'>
+           <input type='submit' name='details' class="btn btn-default butoni" value='Detalji'></a><br>
+            <a href='edit.php?idedit=<?php echo $row4['filmid']; ?>'><input type='submit' name='edit' class="btn btn-default butoni" value='Promjeni'></a><br>
+            <a href='php/remove.php?idremove=<?php echo $row4['filmid']; ?>'><input type='submit' name='remove' class="btn btn-default butoni" value='Ukloni'></a>
+        </td>
+
+ 
+</tr>
+
+<?php }} // end while i elseif trazigodina
+
+
+    
+    
 
     
     ?>
