@@ -26,12 +26,12 @@ $baza=mysqli_select_db($conn, $database); ?>
        
       <select class="form-control2" name="favoriti">
           
-           <?php  $query="select naziv_filma, godina from filmovi";
+           <?php  $query="select naziv_filma, godina from filmovi order by naziv_filma ASC";
           $result=mysqli_query($conn, $query);
           while ($row=mysqli_fetch_assoc($result)){
           ?>
          
-          <option><?php echo $row['naziv_filma']."  ".$row['godina']; ?></option> <?php } ?>
+          <option value="<?php echo $row['naziv_filma']; ?>"><?php echo $row['naziv_filma']; ?></option> <?php } ?>
       </select><br>
       <input type="submit" name="dodajfav" value="Dodaj" class="btn btn-default butoni"><br><br><br>
       
