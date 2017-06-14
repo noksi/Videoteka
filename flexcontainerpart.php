@@ -12,8 +12,26 @@
   
       
       <span><strong>Dodaj film u favorite:</strong></span><br><br>
+      <?php 
+      $server = 'localhost';
+$username = 'root';
+$password = '';
+$database = 'videoteka';
+
+
+$conn = mysqli_connect($server, $username, $password) or die (mysqli_error($conn));
+mysqli_set_charset($conn, "utf8");
+$baza=mysqli_select_db($conn, $database); ?>
+
+       
       <select class="form-control2" name="favoriti">
-      	<option>Action</option>
+          
+           <?php  $query="select naziv_filma, godina from filmovi";
+          $result=mysqli_query($conn, $query);
+          while ($row=mysqli_fetch_assoc($result)){
+          ?>
+         
+          <option><?php echo $row['naziv_filma']."  ".$row['godina']; ?></option> <?php } ?>
       </select><br>
       <input type="submit" name="dodajfav" value="Dodaj" class="btn btn-default butoni"><br><br><br>
       
