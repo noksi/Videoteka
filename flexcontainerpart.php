@@ -11,7 +11,13 @@
   <form class="signup" action="php/create.php" method="post" enctype="multipart/form-data">
   
       
-      <span><strong>Dodaj film u bazu podataka</strong></span> <br><br>
+      <span><strong>Dodaj film u favorite:</strong></span><br><br>
+      <select class="form-control2" name="favoriti">
+      	<option>Action</option>
+      </select><br>
+      <input type="submit" name="dodajfav" value="Dodaj" class="btn btn-default butoni"><br><br><br>
+      
+      <span><strong>Dodaj film u bazu podataka:</strong></span> <br><br>
 
     <span>Naziv filma:</span><br>
       <input type="text" class="input form-control2" name="naziv" style="color: black !important;" placeholder="Upiši naziv filma"><br>
@@ -43,7 +49,7 @@
 
 
 
-      <input type="submit" name="add" class="btn btn-default butoni" value="Dodaj film"><br>
+      <input type="submit" name="add" class="btn btn-default butoni" value="Dodaj film"><br><br>
     
       
       
