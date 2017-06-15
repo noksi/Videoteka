@@ -232,7 +232,10 @@ th {
 
 td {
 
- padding-right: 6px;
+ padding-right: 5px;
+ padding-top: 5px;
+ padding-bottom: 5px;
+ 
 }
 
 .tr {

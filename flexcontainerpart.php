@@ -58,6 +58,9 @@ $baza=mysqli_select_db($conn, $database); ?>
 
       <span>Redatelj:</span><br>
       <input type="text" class="input form-control2" name="redatelj" style="color: black !important;" placeholder="Upiši naziv redatelja"><br>
+      
+      <span>Unesite ID youtube videa:</span><br>
+      <input type="text" class="input form-control2" name="video" style="color: black !important;" placeholder="Upiši ID video trailera"><br>
 
       <span>Odaberite cover:</span>
       <input type="file" class="file" name="slika" id="slika">

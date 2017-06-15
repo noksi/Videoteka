@@ -48,11 +48,11 @@ $baza=mysqli_select_db($conn, $database);
          
         
         <td><?php echo $row['naziv_filma']; ?></td>
-        <td><iframe width="200" height="150" src="https://www.youtube.com/embed/<?php echo $row['video']; ?>"></iframe>
+        <td><iframe width="490" height="320" src="https://www.youtube.com/embed/<?php echo $row['video']; ?>"></iframe>
         </td>
 
 	
-        <td><img src="data:image/jpeg;base64,<?php echo base64_encode($row['slike'] ); ?>" height="200" width="150"></td>
+        <td><img src="data:image/jpeg;base64,<?php echo base64_encode($row['slike'] ); ?>" height="320" width="240"></td>
         
           
 </<tr>
