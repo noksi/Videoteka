@@ -1,4 +1,6 @@
-<?php session_Start(); ?>
+<?php session_Start();
+$_SESSION['details']=$_GET['details']; ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -39,7 +41,7 @@ $conn = mysqli_connect($server, $username, $password) or die (mysqli_error($conn
 mysqli_set_charset($conn, "utf8");
 $baza=mysqli_select_db($conn, $database);
 
-    $query="select * from filmovi where filmid='".$_GET['details']."'";
+    $query="select * from userkolekcija inner join filmovi on filmovi.filmid=userkolekcija.film_id where film_id='".$_GET['details']."' and user_id='".$_SESSION['userid']."'";
     $result=mysqli_query($conn, $query);
     while ($row=mysqli_fetch_assoc($result)) { ?>
     
@@ -81,13 +83,16 @@ $baza=mysqli_select_db($conn, $database);
    <div class="tablaheadforum">
  <table style="width:100%">
      
- <tr class="tr">
+ <tr class="trforum">
          
         
-        <td style="width:100px !important; padding-left:6px !important; border-right:2px solid cadetblue !important;">
+        <td style="width:100px; padding-left:6px !important; border-right:2px solid cadetblue !important;" class="tdforum">
             Korisnik:<br><?php echo $row2['username']; ?><br><br> Broj postova:</td>
         
-        <td style="padding-left:15px !important;"><?php echo $row2['post']; ?></td>
+        <td style="padding-left:15px !important; border-right:2px solid cadetblue !important" class="tdforum"> <?php echo $row2['post']; ?></td>
+        <td style="width:100px; padding-left:6px !important; height: auto !important"><a href='edit.php?idedit='><input type='submit' name='edit' class="btn btn-default butoni" value='Promjeni'></a><br>
+           
+            <a href='php/removepost.php?forumidremove=<?php echo $row2['forumid'];?>'><input type='submit' name='removepost' class="btn btn-default butoni" value='Ukloni'></a></td>
         
         
           
@@ -96,9 +101,26 @@ $baza=mysqli_select_db($conn, $database);
     </table>
 
 
-</div> <!--tablahead-->
+</div> <!--tablaheadforum-->
 
     <?php } ?>
+
+
+    
+   <div class="tablaheadforum">
+ 
+       <form method="POST" action="php/addtext.php">
+           
+           <textarea class="textareaforum"></textarea>
+           
+           <input type="submit" name="komentar" value="komentiraj" class="btn btn-default">
+           
+       </form>
+
+
+</div> <!--tablaheadforum-->
+
+    
 
 
 
