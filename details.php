@@ -1,4 +1,4 @@
-<?php session_start() ?>
+<?php session_Start(); ?>
 
 <!DOCTYPE html>
 <html>
@@ -65,6 +65,44 @@ $baza=mysqli_select_db($conn, $database);
 
 
 </div> <!--tablahead-->
+<br>
+
+
+ 	
+    
+<?php 
+    
+
+
+    $query2="select * from forum inner join login on login.userid=forum.userid where forum.filmid='".$_GET['details']."'";
+    $result2=mysqli_query($conn, $query2);
+    while ($row2=mysqli_fetch_assoc($result2)) { ?>
+    
+   <div class="tablaheadforum">
+ <table style="width:100%">
+     
+ <tr class="tr">
+         
+        
+        <td style="width:100px !important; padding-left:6px !important; border-right:2px solid cadetblue !important;">
+            Korisnik:<br><?php echo $row2['username']; ?><br><br> Broj postova:</td>
+        
+        <td style="padding-left:15px !important;"><?php echo $row2['post']; ?></td>
+        
+        
+          
+</<tr>
+    
+    </table>
+
+
+</div> <!--tablahead-->
+
+    <?php } ?>
+
+
+
+ 
 
 
 
