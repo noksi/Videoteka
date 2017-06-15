@@ -76,7 +76,7 @@ $baza=mysqli_select_db($conn, $database);
     
 
 
-    $query2="select * from forum inner join login on login.userid=forum.userid where forum.filmid='".$_GET['details']."'";
+    $query2="select * from forum inner join login on login.userid=forum.userid where forum.filmid='".$_GET['details']."' order by forumid DESC";
     $result2=mysqli_query($conn, $query2);
     while ($row2=mysqli_fetch_assoc($result2)) { ?>
     
@@ -107,13 +107,13 @@ $baza=mysqli_select_db($conn, $database);
 
 
     
-   <div class="tablaheadforum">
+   <div class="tablahead">
  
        <form method="POST" action="php/addtext.php">
            
-           <textarea class="textareaforum"></textarea>
+           <textarea class="textareaforum" name="text"></textarea>
            
-           <input type="submit" name="komentar" value="komentiraj" class="btn btn-default">
+           <input type="submit" name="komentar" value="Komentiraj" class="btn btn-default">
            
        </form>
 
