@@ -87,9 +87,9 @@ $baza=mysqli_select_db($conn, $database);
          
         
         <td style="width:100px; padding-left:6px !important; border-right:2px solid cadetblue !important;" class="tdforum">
-            Korisnik:<br><?php echo $row2['username']; ?><br><br> Broj postova:</td>
+            Korisnik:<br><?php echo $row2['username']; ?><br><br> Broj postova: <br><br> Datum:<br><?php echo $row2['datum']; ?></td>
         
-        <td style="padding-left:15px !important; border-right:2px solid cadetblue !important" class="tdforum"> <?php echo $row2['post']; ?></td>
+        <td style="padding-left:15px !important; border-right:2px solid cadetblue !important"> <?php echo $row2['post']; ?></td>
         <td style="width:100px; padding-left:6px !important; height: auto !important"><a href='edit.php?idedit='><input type='submit' name='edit' class="btn btn-default butoni" value='Promjeni'></a><br>
            
             <a href='php/removepost.php?forumidremove=<?php echo $row2['forumid'];?>'><input type='submit' name='removepost' class="btn btn-default butoni" value='Ukloni'></a></td>

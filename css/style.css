@@ -258,6 +258,11 @@ td {
  
 }
 
+.tdforum {
+    
+    font-size: 70% !important;
+}
+
 .tr {
     height: 115px;
     color: #9d9d9d;
