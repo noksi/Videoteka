@@ -3,9 +3,14 @@
 <div class="flex-container">
 
 <div class="korisni2">
-
+ 
+    <a href="index.php" class="glyphicon glyphicon-home glif"></a>
+    <a href="index.php" class="glyphicon glyphicon-home glif"></a>
+    <a href="index.php" class="glyphicon glyphicon-home glif"></a>
+    <a href="index.php" class="glyphicon glyphicon-home glif"></a>
+    <a href="index.php" class="glyphicon glyphicon-home glif"></a>
     <form class="signup" method="POST" action="php/logout.php">
-    <input type="submit" class="btn btn-default butoni" value="Odjavite se [<?php echo $_SESSION['username']; ?>]" name="logout">
+            <input type="submit" class="btn btn-default butoni" value="Odjavite se [<?php echo $_SESSION['username']; ?>]" name="logout">
     </form><br>
     
   <form class="signup" action="php/create.php" method="post" enctype="multipart/form-data">
