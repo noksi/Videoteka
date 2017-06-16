@@ -43,6 +43,7 @@ $baza=mysqli_select_db($conn, $database);
 
     $query="select * from userkolekcija inner join filmovi on filmovi.filmid=userkolekcija.film_id where film_id='".$_GET['details']."' and user_id='".$_SESSION['userid']."'";
     $result=mysqli_query($conn, $query);
+    $resultrows=mysqli_num_rows($result);
     while ($row=mysqli_fetch_assoc($result)) { ?>
     
    
@@ -74,7 +75,7 @@ $baza=mysqli_select_db($conn, $database);
     
 <?php 
     
-
+if ($resultrows!=0) {
 
     $query2="select * from forum inner join login on login.userid=forum.userid where forum.filmid='".$_GET['details']."' order by forumid DESC";
     $result2=mysqli_query($conn, $query2);
@@ -116,7 +117,12 @@ $baza=mysqli_select_db($conn, $database);
 
 </div> <!--tablaheadforum-->
 
-    <?php } ?>
+<?php
+
+    } // end while
+    } // end if rowresult
+
+?>
 
 
     
@@ -131,7 +137,7 @@ $baza=mysqli_select_db($conn, $database);
        </form>
 
 
-</div> <!--tablaheadforum-->
+</div> <!--tablahead textarea-->
 
     
 
