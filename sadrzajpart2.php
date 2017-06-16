@@ -15,7 +15,9 @@ $baza=mysqli_select_db($conn, $database);
 
     $query="select * from userkolekcija inner join filmovi on filmovi.filmid=userkolekcija.film_id where user_id='".$_SESSION['userid']."'";
     $result=mysqli_query($conn, $query);
-    while ($row=mysqli_fetch_assoc($result)) { ?>
+    while ($row=mysqli_fetch_assoc($result)) { 
+        $_SESSION['details']=$row['filmid'];
+        ?>
    
     
  <tr class="tr">
