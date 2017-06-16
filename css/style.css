@@ -18,12 +18,21 @@ span {
 
 .glif {
     
-    font-size: 160% !important;
+    font-size: 155% !important;
     background-color: #9d9d9d !important;
     color: #222 !important;
     border-radius: 4px;
-    margin-left: 10px;
+    margin-left: 11px;
     margin-top: 3px;
+    
+}
+
+.glif:hover {
+    
+    font-size: 163% !important;
+    background-color: #222   !important;
+    color: #9d9d9d !important;
+    border: 2px solid #9d9d9d !important;
 }
 
 .flex-container {
@@ -325,14 +334,22 @@ td a:hover {
 }
 
 label {
-      
+     font-size: 155% !important;
+    background-color: #9d9d9d !important;
+    color: #222 !important;
+    border-radius: 4px;
     padding:11px;
+    margin-left: 10px;
     display: inline-block;
+   
 }
 
 label:hover {
-background-color:#9d9d9d;
-color: #222;
+background-color: #222 !important;
+color: #9d9d9d !important;
+border-radius: 4px;
+font-size:163%;
+border: 2px solid #9d9d9d !important;
 
 
 }

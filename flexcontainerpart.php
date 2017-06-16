@@ -5,13 +5,11 @@
 <div class="korisni2">
  
     <a href="index.php" class="glyphicon glyphicon-home glif"></a>
-    <a href="index.php" class="glyphicon glyphicon-home glif"></a>
-    <a href="index.php" class="glyphicon glyphicon-home glif"></a>
-    <a href="index.php" class="glyphicon glyphicon-home glif"></a>
-    <a href="index.php" class="glyphicon glyphicon-home glif"></a>
-    <form class="signup" method="POST" action="php/logout.php">
-            <input type="submit" class="btn btn-default butoni" value="Odjavite se [<?php echo $_SESSION['username']; ?>]" name="logout">
-    </form><br>
+    <a href="index.php" class="glyphicon glyphicon-film glif"></a>
+    <a href="index.php" class="glyphicon glyphicon-cd glif"></a>
+    <a href="index.php" class="glyphicon glyphicon-user glif"></a>
+    <a href="php/logout.php" class="glyphicon glyphicon-off glif"></a>
+    <br><br>
     
   <form class="signup" action="php/create.php" method="post" enctype="multipart/form-data">
   
@@ -69,7 +67,7 @@ $baza=mysqli_select_db($conn, $database); ?>
 
       <span>Odaberite cover:</span>
       <input type="file" class="file" name="slika" id="slika">
-      <label for="slika">Kliknite ovdje za odabir</label><br>
+      <label for="slika"><span class="glyphicon glyphicon-search"></span></label><br><br><br>
 
 
 

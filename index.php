@@ -16,6 +16,7 @@ if (isset($_SESSION['username']))
 <body>
 
 <?php
+
 include 'flexcontainerpart.php';
 include 'mojnavbarpart.php';
 include 'sadrzajpart1.php';
@@ -35,7 +36,10 @@ else {
     
 </form> 
     
-    <?php } ?>
+    <?php }
+    
+   
+    ?>
 
 
 </body>
