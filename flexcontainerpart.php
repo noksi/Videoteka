@@ -4,11 +4,11 @@
 
 <div class="korisni2">
  
-    <a href="index.php" class="glyphicon glyphicon-home glif"></a>
-    <a href="index.php" class="glyphicon glyphicon-film glif"></a>
-    <a href="index.php" class="glyphicon glyphicon-cd glif"></a>
-    <a href="index.php" class="glyphicon glyphicon-user glif"></a>
-    <a href="php/logout.php" class="glyphicon glyphicon-off glif"></a>
+    <a href="index.php" class="glyphicon glyphicon-home glif" title="Početna stranica"></a>
+    <a href="index.php" class="glyphicon glyphicon-film glif" title="Filmovi"></a>
+    <a href="index.php" class="glyphicon glyphicon-cd glif" title="Igre"></a>
+    <a href="index.php" class="glyphicon glyphicon-user glif" title="Popis korisnika"></a>
+    <a href="php/logout.php" class="glyphicon glyphicon-off glif" title="Odjava"></a>
     <br><br>
     
   <form class="signup" action="php/create.php" method="post" enctype="multipart/form-data">
