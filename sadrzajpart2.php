@@ -31,7 +31,7 @@ $baza=mysqli_select_db($conn, $database);
            <a href="details.php?details=<?php echo $row['filmid']; ?>">
            <input type='submit' name='details' class="btn btn-default butoni" value='Topic'></a><br>
            
-           <a href='edit.php?idedit='><input type='submit' name='edit' class="btn btn-default butoni" value='Promjeni'></a><br>
+           <a href='edit.php?idedit=<?php echo $row['filmid'];?>'><input type='submit' name='edit' class="btn btn-default butoni" value='Promjeni'></a><br>
            
             <a href='php/remove.php?idremove=<?php echo $row['filmid'];?>'><input type='submit' name='remove' class="btn btn-default butoni" value='Ukloni'></a>
         </td>

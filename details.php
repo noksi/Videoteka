@@ -68,13 +68,9 @@ if ($resultrows!=0) {
 <?php
 
     } // end while
-    } // end if rowresult
-
-?>
-
-
+    ?>
     
-   <div class="tablahead">
+ <div class="tablahead">
  
        <form method="POST" action="php/addtext.php">
            
@@ -86,6 +82,14 @@ if ($resultrows!=0) {
 
 
 </div> <!--tablahead textarea-->
+    
+   <?php } // end if rowresult
+
+?>
+
+
+    
+  
 
     
 
