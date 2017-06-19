@@ -48,7 +48,14 @@ $result=mysqli_query($conn, $query);
         <td>
             <a href="details.php?details=<?php echo $row['filmid']; ?>">
            <input type='submit' name='details' class="btn btn-default butoni" value='Topic'></a><br>
+           
+           <?php 
+      
+      if ($_SESSION['priv']=='admin') {
+      ?>
             <a href='edit.php?idedit=<?php echo $row['filmid']; ?>'><input type='submit' name='edit' class="btn btn-default butoni" value='Promjeni'></a><br>
+            
+      <?php } ?>
             <a href='php/remove.php?idremove=<?php echo $row['filmid']; ?>'><input type='submit' name='remove' class="btn btn-default butoni" value='Ukloni'></a>
         </td>
 
@@ -74,7 +81,14 @@ $result2=mysqli_query($conn, $query2);
         <td>
             <a href='details.php?details=<?php echo $row2['filmid']; ?>'>
            <input type='submit' name='details' class="btn btn-default butoni" value='Topic'></a><br>
+           
+           <?php 
+      
+      if ($_SESSION['priv']=='admin') {
+      ?>
             <a href='edit.php?idedit=<?php echo $row2['filmid']; ?>'><input type='submit' name='edit' class="btn btn-default butoni" value='Promjeni'></a><br>
+            
+      <?php } ?>
             <a href='php/remove.php?idremove=<?php echo $row2['filmid']; ?>'><input type='submit' name='remove' class="btn btn-default butoni" value='Ukloni'></a>
         </td>
 
@@ -100,7 +114,14 @@ $result3=mysqli_query($conn, $query3);
         <td>
             <a href='details.php?details=<?php echo $row3['filmid']; ?>'>
            <input type='submit' name='details' class="btn btn-default butoni" value='Topic'></a><br>
+           
+           <?php 
+      
+      if ($_SESSION['priv']=='admin') {
+      ?>
             <a href='edit.php?idedit=<?php echo $row3['filmid']; ?>'><input type='submit' name='edit' class="btn btn-default butoni" value='Promjeni'></a><br>
+            
+      <?php } ?>
             <a href='php/remove.php?idremove=<?php echo $row3['filmid']; ?>'><input type='submit' name='remove' class="btn btn-default butoni" value='Ukloni'></a>
         </td>
 
@@ -126,7 +147,14 @@ $result4=mysqli_query($conn, $query4);
         <td>
             <a href='details.php?details=<?php echo $row4['filmid']; ?>'>
            <input type='submit' name='details' class="btn btn-default butoni" value='Topic'></a><br>
+           
+           <?php 
+      
+      if ($_SESSION['priv']=='admin') {
+      ?>
             <a href='edit.php?idedit=<?php echo $row4['filmid']; ?>'><input type='submit' name='edit' class="btn btn-default butoni" value='Promjeni'></a><br>
+            
+      <?php } ?>
             <a href='php/remove.php?idremove=<?php echo $row4['filmid']; ?>'><input type='submit' name='remove' class="btn btn-default butoni" value='Ukloni'></a>
         </td>
 
