@@ -38,6 +38,11 @@ $baza=mysqli_select_db($conn, $database); ?>
       </select><br>
       <input type="submit" name="dodajfav" value="Dodaj" class="btn btn-default butoni"><br><br><br>
       
+      <?php 
+      
+      if ($_SESSION['priv']=='admin') {
+      ?>
+      
       <span><strong>Dodaj film u bazu podataka:</strong></span> <br><br>
 
     <span>Naziv filma:</span><br>
@@ -75,7 +80,7 @@ $baza=mysqli_select_db($conn, $database); ?>
 
       <input type="submit" name="add" class="btn btn-default butoni" value="Dodaj film"><br><br>
     
-      
+      <?php } ?>
       
   </form>
   </div> <!--korisni2-->

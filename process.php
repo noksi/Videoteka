@@ -22,11 +22,13 @@ $baza=mysqli_select_db($conn, $database);
     {$_SESSION['username']=$_POST['username'];
     $_SESSION['password']=$_POST['password'];
     
+    
     $query="select * from login where username='".$_SESSION['username']."' and password='".$_SESSION['password']."'";
     $result=mysqli_query($conn, $query);
     $row=mysqli_fetch_assoc($result);
         
         $_SESSION['userid']=$row['userid'];
+        $_SESSION['priv']=$row['privilege'];
     
     
     }
