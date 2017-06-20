@@ -29,6 +29,8 @@ $baza=mysqli_select_db($conn, $database);
         
         $_SESSION['userid']=$row['userid'];
         $_SESSION['priv']=$row['privilege'];
+        unset($_SESSION['username']);
+        $_SESSION['username']=$row['username'];
     
     
     }

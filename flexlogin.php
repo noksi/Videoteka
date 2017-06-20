@@ -14,7 +14,7 @@
     <br>
     <br>
     <br>
-    <form action="#" method="POST" class="signup">
+    <form action="reg.php" method="POST" class="signup">
         <span><strong>Niste se još registrirali?</strong></span><br><br>
         <input type="submit" name="submitreg" class="btn btn-default butoni" value="Registriraj se" >
     </form>
