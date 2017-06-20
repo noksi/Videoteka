@@ -88,6 +88,21 @@ font-weight: bold;
      
      
  }
+ 
+   .odjava {
+     
+     font-size: 170%;
+     border-radius: 4px;
+     margin-left:1px;
+     padding: 9px !important;
+     background-color: firebrick !important;
+         color: lightpink !important;
+         margin-top:10px;
+         margin-right:2px;
+         
+     
+     
+ }
 
 
  .korisni2 {

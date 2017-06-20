@@ -42,7 +42,13 @@ while ($rowavatar=mysqli_fetch_assoc($resultavatar)){ ?>
   ?>]<br> <a href="#" class="glyphicon glyphicon-envelope posta" title="Sandučić"></a> Imate novih poruka: [0]<br>
   
   <a href="" class="glyphicon glyphicon-user user" title="Profil [<?php echo $_SESSION['username'];?>]"></a>
-    Uredite svoj profil</div>
+  Uredite svoj profil <br>
+  
+  <a href="php/logout.php" class="glyphicon glyphicon-off odjava" title="Odjava [<?php echo $_SESSION['username'];?>]"></a>
+  Odjavite se
+    
+    
+    </div> <!--flexuser-->
     
     
   <form class="signup" action="php/create.php" method="post" enctype="multipart/form-data">
@@ -78,7 +84,7 @@ while ($rowavatar=mysqli_fetch_assoc($resultavatar)){ ?>
       <input type="text" class="input form-control2" name="naziv" style="color: black !important;" placeholder="Upiši naziv filma"><br>
 
       <span>Godina izdavanja:</span><br>
-      <input type="number" class="form-control2" name="godina" style="color: black !important" placeholder="Upisi godinu"><br>
+      <input type="number" class="form-control2" name="godina" style="color: black !important" placeholder="Upiši godinu"><br>
 
       <span>Žanr:</span><br>
       <select class="form-control2" name="zanrovi">
