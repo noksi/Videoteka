@@ -69,7 +69,7 @@ while ($rowavatar=mysqli_fetch_assoc($resultavatar)){ ?>
           while ($row=mysqli_fetch_assoc($result)){
           ?>
          
-          <option value="<?php echo $row['naziv_filma']; ?>"><?php echo $row['naziv_filma']; ?></option> <?php } ?>
+          <option value="<?php echo $row['naziv_filma']; ?>"><?php echo $row['naziv_filma']." ".$row['godina']; ?></option> <?php } ?>
           </datalist><br>
       <input type="submit" name="dodajfav" value="Dodaj" class="btn btn-default butoni"><br><br><br>
       
