@@ -92,7 +92,7 @@ if ($resultrows!=0) {
  
        <form method="POST" action="php/addtext.php">
            
-           <textarea class="textareaforum" name="text"></textarea>
+           <textarea class="textareaforum" name="text" rows="8"></textarea>
            
            <input type="submit" name="komentar" value="Komentiraj" class="btn btn-default" style="background: teal !important; color: white !important;">
            
