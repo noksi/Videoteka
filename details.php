@@ -50,7 +50,7 @@ if ($resultrows!=0) {
             Datum:<br><span style="color: black"><?php echo $row2['datum']; ?></span></td>
         
         <td style="padding-left:15px !important; border-right:2px solid cadetblue !important">
-            <span style="color: slategrey;"> <?php echo $row2['post']; ?></span></td>
+            <span style="color: slategrey;"> <?php echo nl2br($row2['post']); ?></span></td>
         
       
         <td style="width:100px; padding-left:6px !important; height: auto !important">
