@@ -74,6 +74,14 @@ font-weight: bold;
      
  }
  
+ .posta:hover {
+     
+     background-color: powderblue !important;
+         color: teal !important;
+         border: 2px solid teal !important;
+     
+ }
+ 
   .user {
      
      font-size: 170%;
@@ -84,8 +92,14 @@ font-weight: bold;
          color: powderblue !important;
          margin-top:10px;
          margin-right:2px;
-         
+ 
+ }
+ 
+ .user:hover {
      
+     background-color: powderblue !important;
+         color: dodgerblue !important;
+         border: 2px solid dodgerblue !important;
      
  }
  
@@ -101,6 +115,14 @@ font-weight: bold;
          margin-right:2px;
          
      
+     
+ }
+ 
+ .odjava:hover {
+     
+     background-color: lightpink !important;
+         color: firebrick !important;
+         border: 2px solid firebrick !important;
      
  }
 
