@@ -8,7 +8,7 @@
     <a href="index.php" class="glyphicon glyphicon-film glif" title="Filmovi"></a>
     <a href="index.php" class="glyphicon glyphicon-cd glif" title="Igre"></a>
     <a href="index.php" class="glyphicon glyphicon-user glif" title="Popis korisnika"></a>
-    <a href="php/logout.php" class="glyphicon glyphicon-off glif" title="Odjava [<?php echo $_SESSION['username']; ?>]"></a>
+    <a href="index.php" class="glyphicon glyphicon-comment glif" title="Chat"></a>
     <br><br>
     
     <?php 
@@ -27,11 +27,22 @@ $resultavatar=mysqli_query($conn, $queryavatar);
 while ($rowavatar=mysqli_fetch_assoc($resultavatar)){ ?>
     
     <div class="flexuser">
-    <img src="data:image/jpeg;base64,<?php echo base64_encode($rowavatar['avatar'] ); ?>" height="42" width="42" style="margin-right:2px !important; border-radius: 4px !important; border: 2px solid #222 !important;">
+        
+        <?php 
+        
+        if ($rowavatar['avatar']!=NULL){
+        
+        ?>
+    <img src="data:image/jpeg;base64,<?php echo base64_encode($rowavatar['avatar'] ); ?>" height="42" width="42" style="margin-right:2px !important; border-radius: 4px !important;">
+    
+        <?php } ?>
        Prijavljeni ste kao [<?php  echo $rowavatar['username'];
   }
     
-  ?>]<br> <a class="glyphicon glyphicon-envelope posta"></a> Imate novih poruka: [0]</div>
+  ?>]<br> <a href="#" class="glyphicon glyphicon-envelope posta" title="Sandučić"></a> Imate novih poruka: [0]<br>
+  
+  <a href="" class="glyphicon glyphicon-user user" title="Profil [<?php echo $_SESSION['username'];?>]"></a>
+    Uredite svoj profil</div>
     
     
   <form class="signup" action="php/create.php" method="post" enctype="multipart/form-data">

@@ -25,18 +25,11 @@ include 'sadrzajpart2.php';
 }
 
 else {
-?>
+    include 'headpart.php';
+    include 'flexlogin.php';
+   
     
-    <form method="POST" action="process.php">
-        username:
-    <input type="text" name="username">
-    password:
-    <input type="password" name="password">
-    <input type="submit" name="submit">
-    
-</form> 
-    
-    <?php }
+   }
     
    
     ?>
