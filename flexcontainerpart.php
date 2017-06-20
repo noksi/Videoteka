@@ -62,15 +62,15 @@ while ($rowavatar=mysqli_fetch_assoc($resultavatar)){ ?>
  ?>
 
        
-      <select class="form-control2" name="favoriti">
-          
+      <input type="text" class="form-control2" name="favoriti" list="filmovi" autocomplete="off">
+      <datalist id="filmovi">
            <?php  $query="select naziv_filma, godina from filmovi order by naziv_filma ASC";
           $result=mysqli_query($conn, $query);
           while ($row=mysqli_fetch_assoc($result)){
           ?>
          
           <option value="<?php echo $row['naziv_filma']; ?>"><?php echo $row['naziv_filma']; ?></option> <?php } ?>
-      </select><br>
+          </datalist><br>
       <input type="submit" name="dodajfav" value="Dodaj" class="btn btn-default butoni"><br><br><br>
       
       <?php 
