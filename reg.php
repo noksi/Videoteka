@@ -8,7 +8,7 @@
 
 <div class="korisni2">
  
-    <form method="POST" action="php/regscript.php" class="signup">
+    <form method="POST" action="php/regscript.php" class="signup" enctype="multipart/form-data">
         
         <span><strong>Unesite željeno korisničko ime:</strong></span><br>
         <input class="form-control2" type="text" name="korisnik"><br>
