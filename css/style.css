@@ -44,6 +44,36 @@ span {
       
 }
 
+.flexuser {
+   	
+   	
+
+  
+    color: #222;
+    padding: 10px;
+margin-left: 10px;
+ border-radius: 4px;
+background-color: #9d9d9d;
+font-size: 86%;
+font-weight: bold;
+
+ }
+ 
+ .posta {
+     
+     font-size: 170%;
+     border-radius: 4px;
+     margin-left:1px;
+     padding: 9px !important;
+     background-color: teal !important;
+         color: powderblue !important;
+         margin-top:10px;
+         margin-right:2px;
+         border:2px solid #222;
+     
+     
+ }
+
 
  .korisni2 {
    	height: 100%;

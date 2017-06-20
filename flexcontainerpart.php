@@ -8,23 +8,41 @@
     <a href="index.php" class="glyphicon glyphicon-film glif" title="Filmovi"></a>
     <a href="index.php" class="glyphicon glyphicon-cd glif" title="Igre"></a>
     <a href="index.php" class="glyphicon glyphicon-user glif" title="Popis korisnika"></a>
-    <a href="php/logout.php" class="glyphicon glyphicon-off glif" title="Odjava"></a>
+    <a href="php/logout.php" class="glyphicon glyphicon-off glif" title="Odjava [<?php echo $_SESSION['username']; ?>]"></a>
     <br><br>
+    
+    <?php 
+    
+    $server = 'localhost';
+$username = 'root';
+$password = '';
+$database = 'videoteka';
+$conn = mysqli_connect($server, $username, $password) or die (mysqli_error($conn));
+mysqli_set_charset($conn, "utf8");
+$baza=mysqli_select_db($conn, $database);
+
+
+$queryavatar="select * from login where userid='".$_SESSION['userid']."'";
+$resultavatar=mysqli_query($conn, $queryavatar);
+while ($rowavatar=mysqli_fetch_assoc($resultavatar)){ ?>
+    
+    <div class="flexuser">
+    <img src="data:image/jpeg;base64,<?php echo base64_encode($rowavatar['avatar'] ); ?>" height="42" width="42" style="margin-right:2px !important; border-radius: 4px !important; border: 2px solid #222 !important;">
+       Prijavljeni ste kao [<?php  echo $rowavatar['username'];
+  }
+    
+  ?>]<br> <a class="glyphicon glyphicon-envelope posta"></a> Imate novih poruka: [0]</div>
+    
     
   <form class="signup" action="php/create.php" method="post" enctype="multipart/form-data">
   
       
       <span><strong>Dodaj film u favorite:</strong></span><br><br>
       <?php 
-      $server = 'localhost';
-$username = 'root';
-$password = '';
-$database = 'videoteka';
 
 
-$conn = mysqli_connect($server, $username, $password) or die (mysqli_error($conn));
-mysqli_set_charset($conn, "utf8");
-$baza=mysqli_select_db($conn, $database); ?>
+
+ ?>
 
        
       <select class="form-control2" name="favoriti">
