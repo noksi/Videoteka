@@ -56,7 +56,7 @@ if ($resultrows!=0) {
         <td style="width:100px; padding-left:6px !important; height: auto !important">
             
             <?php if ($row2['avatar']!=null) { ?>
-      <img src="data:image/jpeg;base64,<?php echo base64_encode($row2['avatar'] ); ?>" height="85" width="85"><br>
+      <img src="data:image/jpeg;base64,<?php echo base64_encode($row2['avatar'] ); ?>" height="85" width="85" style="border-radius: 4px !important; margin-bottom: 2px !important;"><br>
       
     <?php } ?>
       
