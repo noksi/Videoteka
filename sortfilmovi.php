@@ -17,15 +17,7 @@ include 'sadrzajpart1.php';
     
     <?php 
     //spajanje na bazu
-$server = 'localhost';
-$username = 'root';
-$password = '';
-$database = 'videoteka';
-
-
-$conn = mysqli_connect($server, $username, $password) or die (mysqli_error($conn));
-mysqli_set_charset($conn, "utf8");
-$baza=mysqli_select_db($conn, $database);
+include 'php/dbcon.php';
 
     $query="select * from userkolekcija inner join filmovi on filmovi.filmid=userkolekcija.film_id where user_id='".$_SESSION['userid']."' order by naziv_filma ASC";
     $result=mysqli_query($conn, $query);
