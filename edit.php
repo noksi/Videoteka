@@ -38,7 +38,7 @@ include 'php/dbcon.php';
     while ($row=mysqli_fetch_assoc($result)) { ?>
     
    
- <tr class="tr">
+ <tr class="trdet">
          
         
         <td><?php echo $row['naziv_filma']; ?></td>
