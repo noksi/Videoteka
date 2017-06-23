@@ -1,4 +1,7 @@
-<?php session_Start(); ?>
+<?php session_Start(); 
+$index=0;
+$_SESSION['section']=$index;
+?>
 
 <!DOCTYPE html>
 <html>
@@ -10,9 +13,6 @@
 if (isset($_SESSION['username']))
     {
 include 'flexcontainerpart.php';
-include 'mojnavbarpart.php';
-include 'sadrzajpart1.php';
-include 'sadrzajpart2.php';
 
 }
 

@@ -1,12 +1,13 @@
 * {
-    box-sizing: border-box;
     font-family: sans-serif;
+    box-sizing: border-box;
     font-size: 100%
 
 }
 
 body {
 
+    
   background-color: powderblue;
 }
 span {
@@ -376,7 +377,7 @@ td {
 
 .tdforum {
     
-    font-size: 70% !important;
+    font-size: 73% !important;
 }
 
 .tr {
@@ -405,6 +406,7 @@ td {
     height: auto;
     color: #9d9d9d;
     font-weight: bold;
+   
     
 }
 

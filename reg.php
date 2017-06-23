@@ -10,7 +10,7 @@
  
     <form method="POST" action="php/regscript.php" class="signup" enctype="multipart/form-data">
         <span><strong>REGISTRIRAJ SE</strong></span><br>
-        <div class="flexuserlogin">
+<div class="flexuserlogin">
             <span><strong style="color: #222">Unesite željeno korisničko ime:</strong></span><br>
         <input class="form-control2" type="text" name="korisnik"><br>
         
@@ -23,7 +23,7 @@
         
         <input type="submit" name="registracija" class="btn btn-default butoni" value="Podnesi registraciju">
     
-</form> 
+</form> <!-- kraj forme-->
 </div> <!--flexuserlogin-->
     
 <br>

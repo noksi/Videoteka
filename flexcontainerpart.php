@@ -5,7 +5,7 @@
 <div class="korisni2">
  
     <a href="index.php" class="glyphicon glyphicon-home glif" title="Početna stranica"></a>
-    <a href="index.php" class="glyphicon glyphicon-film glif" title="Filmovi"></a>
+    <a href="movies.php" class="glyphicon glyphicon-film glif" title="Filmovi"></a>
     <a href="index.php" class="glyphicon glyphicon-cd glif" title="Igre"></a>
     <a href="index.php" class="glyphicon glyphicon-user glif" title="Popis korisnika"></a>
     <a href="index.php" class="glyphicon glyphicon-comment glif" title="Chat"></a>
@@ -69,7 +69,7 @@ while ($rowavatar=mysqli_fetch_assoc($resultavatar)){ ?>
       
       <?php 
       
-      if ($_SESSION['priv']=='admin') {
+      if ($_SESSION['priv']=='admin' && $_SESSION['section']=='1') {
       ?>
       
       <span><strong>Dodaj film u bazu podataka:</strong></span> <br><br>
@@ -87,10 +87,11 @@ while ($rowavatar=mysqli_fetch_assoc($resultavatar)){ ?>
       	<option>Drama</option>
       	<option>Horor</option>
       	<option>SF-Fantasy</option>
-        <option>Akcija-SF</option>
+        <option>Action-SF</option>
         <option>Adventure</option>
         <option>Romance</option>
         <option>Crime</option>
+        <option>Thriller</option>
       </select><br>
 
       <span>Redatelj:</span><br>

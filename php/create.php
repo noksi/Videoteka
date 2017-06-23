@@ -15,7 +15,7 @@ $query="insert into filmovi (naziv_filma, godina, zanr, redatelj, slike, video) 
         . " '".$_POST['video']."')";
 
 $result=mysqli_query($conn, $query);
-if ($result){header('Location: ../index.php');}
+if ($result){header('Location: ../movies.php');}
 else {echo "Došlo je do greške, molimo pokušajte ponovno";}
 }
 
@@ -29,7 +29,7 @@ elseif (isset($_POST['dodajfav'])){
        
     $query3="insert into userkolekcija (film_id, user_id) values ('".$filmid."', '".$_SESSION['userid']."')";
     $result3=mysqli_query($conn, $query3);
-    if ($result3) {header('Location: ../index.php');}
+    if ($result3) {header('Location: ../movies.php');}
     else {echo "Došlo je do greške, molimo pokušajte ponovno";}
     
 }

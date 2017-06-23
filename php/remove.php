@@ -13,7 +13,7 @@ include 'dbcon.php';
     $query="DELETE from userkolekcija where film_id='".$id."'";
     $ispis=mysqli_query($conn, $query);
     
-    if ($ispis) {header('Location: ../index.php');}
+    if ($ispis) {header('Location: ../movies.php');}
     
     else {echo "Došlo je do greške, molimo pokušajte ponovno.";}
           

@@ -33,7 +33,7 @@ if ($resultrows!=0) {
  <tr class="trforum">
          
         
-        <td style="width:100px; padding-left:6px !important; border-right:2px solid cadetblue !important;" class="tdforum">
+        <td style="width:100px; padding-left:6px !important; border-right:2px solid cadetblue !important; " class="tdforum">
             Korisnik:<br><span style="color: black"><?php echo $row2['username']; ?></span><br><br>
             Broj postova:
             <span style="color: black">
@@ -49,7 +49,7 @@ if ($resultrows!=0) {
             <br><br>
             Datum:<br><span style="color: black"><?php echo $row2['datum']; ?></span></td>
         
-        <td style="padding-left:15px !important; border-right:2px solid cadetblue !important">
+        <td style="padding-left:15px !important; border-right:2px solid cadetblue !important;">
             <span style="color: slategrey;"> <?php echo nl2br($row2['post']); ?></span></td>
         
       
