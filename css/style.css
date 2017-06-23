@@ -158,6 +158,7 @@ overflow-y: scroll;
 
 .mojnavbar {
 
+   
 display: -webkit-flex;
     display: flex;
 background-color: teal;
@@ -170,7 +171,7 @@ left:25%;
 
 .mojnavbarforma {
   
-  
+   
   padding:10px;
   width:100%;
   height:auto;
@@ -202,6 +203,67 @@ left:25%;
   display: -webkit-flex;
     display: flex;
 
+}
+
+.mojnavbarindex {
+
+display: -webkit-flex;
+    display: flex;
+background-color: cadetblue;
+height:6%;
+position: relative;
+width:75%;
+left:25%;
+
+}
+
+.mojnavbarformaindex {
+  
+    
+    color: #222;
+  font-size: 150%;
+  padding:10px;
+  width:100%;
+  height:auto;
+  background-color: cadetblue;
+  display: -webkit-flex;
+    display: flex;
+
+}
+
+.GHS {
+    
+    background-color:white;
+    padding:5px;
+    border-radius: 4px;
+    border: 2px solid teal;
+    font-family: Play, sans-serif !important;
+    display: block;
+}
+
+.mojnavbarformaindexdetails {
+  
+    
+    color: #222;
+  font-size: 100%;
+  padding:10px;
+  width:100%;
+  height:auto;
+  background-color: cadetblue;
+  display: -webkit-flex;
+    display: flex;
+
+}
+.GHSdetails {
+    
+    margin-top: 5px;
+    background-color:white;
+    padding:3px;
+    border-radius: 4px;
+    border: 2px solid teal;
+    font-family: Play, sans-serif !important;
+    display: block;
+    padding: 5px;
 }
 
 .korisni2 a {
