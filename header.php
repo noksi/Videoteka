@@ -1,9 +1,12 @@
 <div class="mojnavbarindex">
+    
     <div class="mojnavbarformaindex">
  	<div class="navbar-title" style="font-weight: bold; font-family: Play, sans-serif !important;">
-            <span class="GHS"> Geek Hot Spot!</span>
+            <span class="GHS"> Geek Hot Spot!</span> 
         
         </div> <!--navbar title-->
+        
+        
             </div> <!--mojnavbarformaindex-->
             
             
@@ -27,6 +30,9 @@
             <span class="GHSdetails"> Najnoviji korisnik: <strong></strong></span>
                 </div> <!--navbar title-->
             </div> <!--mojnavbarformaindex-->
+            
+            
+            
             
             
             

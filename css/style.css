@@ -238,7 +238,7 @@ left:25%;
     border-radius: 4px;
     border: 2px solid teal;
     font-family: Play, sans-serif !important;
-    display: block;
+    display: flex;
 }
 
 .mojnavbarformaindexdetails {
@@ -252,6 +252,7 @@ left:25%;
   background-color: cadetblue;
   display: -webkit-flex;
     display: flex;
+    
 
 }
 .GHSdetails {
@@ -262,7 +263,7 @@ left:25%;
     border-radius: 4px;
     border: 2px solid teal;
     font-family: Play, sans-serif !important;
-    display: block;
+    display: flex;
     padding: 5px;
 }
 
