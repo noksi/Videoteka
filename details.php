@@ -7,8 +7,10 @@ $_SESSION['details']=$_GET['details']; ?>
 <?php include 'headpart.php'; ?>
 
 <body>
-
 <?php
+if (isset($_SESSION['username']))
+    {
+
 include 'flexcontainerpart.php';
 include 'mojnavbarpart.php';
 include 'sadrzajdetails.php';
@@ -119,7 +121,13 @@ if ($resultrows!=0) {
 
  </div><!--sadrzaj-->
 
-
+    <?php }  //end if session
+    
+    else {header('Location: index.php');}
+    ?>
+ 
+ 
 </body>
 
 </html>
+

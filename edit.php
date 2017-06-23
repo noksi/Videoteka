@@ -9,6 +9,9 @@
 
 <?php
 
+if (isset($_SESSION['username']))
+    {
+
 include 'flexcontainerpart.php';
 include 'mojnavbarpart.php'; ?>
     
@@ -122,8 +125,15 @@ $query="select * from userkolekcija inner join filmovi on filmovi.filmid=userkol
 </div> <!--tablahead-->
     
 
-<?php }
+<?php } // end if resultrow
+    } //end if session
 
+else {
+    
+    header('Location: index.php');
+
+   }
+    
 ?>
 
     

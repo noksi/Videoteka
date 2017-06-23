@@ -7,15 +7,15 @@
 <body>
 
 <?php
+
+if (isset($_SESSION['username']))
+    {
+    
+
 include 'flexcontainerpart.php';
 include 'mojnavbarpart.php';
 include 'sadrzajpart1.php';
-?>
 
-
-
-    
-    <?php 
     //spajanje na bazu
 include 'php/dbcon.php';
 
@@ -64,7 +64,15 @@ include 'php/dbcon.php';
 
 
 
+    <?php }
+    
+    else {
+    
+    header('Location: index.php');
 
+   }
+    
+    ?>
  
 
 

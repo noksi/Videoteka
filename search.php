@@ -7,6 +7,11 @@
 <body>
 
 <?php
+
+if (isset($_SESSION['username']))
+    {
+    
+
 include 'flexcontainerpart.php';
 include 'mojnavbarpart.php';
 include 'sadrzajpart1.php';
@@ -173,7 +178,15 @@ $result4=mysqli_query($conn, $query4);
 
  </div><!--sadrzaj-->
 
+    <?php } 
     
+    else {
+    
+    header('Location: index.php');
+
+   }
+    
+    ?>
 
 
 </body>

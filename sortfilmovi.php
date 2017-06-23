@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php session_Start(); ?>
 
 <!DOCTYPE html>
 <html>
@@ -7,6 +7,11 @@
 <body>
 
 <?php
+
+if (isset($_SESSION['username']))
+    {
+    
+
 include 'flexcontainerpart.php';
 include 'mojnavbarpart.php';
 include 'sadrzajpart1.php';
@@ -62,7 +67,15 @@ include 'php/dbcon.php';
  </div><!--sadrzaj-->
 
 
+    <?php } 
+    
+    else {
+    
+    header('Location: index.php');
 
+   }
+   
+    ?>
 
  
 
