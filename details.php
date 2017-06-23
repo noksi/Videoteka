@@ -1,5 +1,5 @@
 <?php session_Start();
-$_SESSION['details']=$_GET['details']; ?>
+ ?>
 
 
 <!DOCTYPE html>
@@ -24,7 +24,7 @@ include 'sadrzajdetails.php';
 <?php 
     
 if ($resultrows!=0) {
-
+$_SESSION['details']=$_GET['details'];
     $query2="select * from forum inner join login on login.userid=forum.userid where forum.filmid='".$_GET['details']."' order by forumid DESC";
     $result2=mysqli_query($conn, $query2);
     while ($row2=mysqli_fetch_assoc($result2)) { ?>
@@ -108,14 +108,6 @@ if ($resultrows!=0) {
 ?>
 
 
-    
-  
-
-    
-
-
-
- 
 
 
 

@@ -69,14 +69,14 @@ while ($rowavatar=mysqli_fetch_assoc($resultavatar)){ ?>
        
       <input type="text" class="form-control2" name="favoritiigre" list="igre" autocomplete="off">
       <datalist id="igre">
-           <?php  $query="select naziv_filma, godina from filmovi order by naziv_filma ASC";
-          $result=mysqli_query($conn, $query);
-          while ($row=mysqli_fetch_assoc($result)){
+           <?php  $queryigre="select naziv_filma, godina from filmovi order by naziv_filma ASC";
+          $resultigre=mysqli_query($conn, $queryigre);
+          while ($rowigre=mysqli_fetch_assoc($resultigre)){
           ?>
          
-          <option value="<?php echo $row['naziv_filma']; ?>"><?php echo $row['naziv_filma']." ".$row['godina']; ?></option> <?php } ?>
+          <option value="<?php echo $rowigre['naziv_filma']; ?>"><?php echo $rowigre['naziv_filma']." ".$rowigre['godina']; ?></option> <?php } ?>
           </datalist><br>
-      <input type="submit" name="dodajfav" value="Dodaj" class="btn btn-default butoni"><br><br><br>
+      <input type="submit" name="dodajfavigre" value="Dodaj" class="btn btn-default butoni"><br><br><br>
       
       <?php 
       
