@@ -49,15 +49,26 @@ while ($rowavatar=mysqli_fetch_assoc($resultavatar)){ ?>
   
       
       <span><strong>Dodaj film u favorite:</strong></span><br><br>
-      <?php 
 
-
-
- ?>
 
        
       <input type="text" class="form-control2" name="favoriti" list="filmovi" autocomplete="off">
       <datalist id="filmovi">
+           <?php  $query="select naziv_filma, godina from filmovi order by naziv_filma ASC";
+          $result=mysqli_query($conn, $query);
+          while ($row=mysqli_fetch_assoc($result)){
+          ?>
+         
+          <option value="<?php echo $row['naziv_filma']; ?>"><?php echo $row['naziv_filma']." ".$row['godina']; ?></option> <?php } ?>
+          </datalist><br>
+      <input type="submit" name="dodajfav" value="Dodaj" class="btn btn-default butoni"><br><br><br>
+      
+      <span><strong>Dodaj igru u favorite:</strong></span><br><br>
+
+
+       
+      <input type="text" class="form-control2" name="favoritiigre" list="igre" autocomplete="off">
+      <datalist id="igre">
            <?php  $query="select naziv_filma, godina from filmovi order by naziv_filma ASC";
           $result=mysqli_query($conn, $query);
           while ($row=mysqli_fetch_assoc($result)){
