@@ -267,6 +267,39 @@ left:25%;
     padding: 5px;
 }
 
+.pm {
+    
+    list-style-type: none;
+    padding:2px;
+}
+
+.caption {
+    
+    height: auto;
+    padding-bottom: 15px;
+    padding-right: 10px;
+    color: #222;
+    font-family: Play, sans-serif;
+    font-size:135%;
+}
+
+.pmfolder {
+    
+    
+    text-decoration: none;
+    color: #9d9d9d;
+   
+}
+
+.pmfolder:hover {
+    
+    text-decoration: none;
+    color: #9d9d9d;
+    
+}
+
+
+
 .korisni2 a {
     background-color: #222; 
     color: #9d9d9d;
@@ -455,6 +488,7 @@ td {
     color: black;
     border: 1px solid cadetblue;
     text-decoration: none;
+    
 }
 
 .trdet {
