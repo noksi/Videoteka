@@ -27,7 +27,7 @@
                             <br><br>
 
                             <?php
-                            $querypm = "select * from pm inner join login on login.userid=pm.otheruserid where pm.userid='" . $_SESSION['userid'] . "'";
+                            $querypm = "select * from pm inner join login on login.userid=pm.otheruserid where pm.userid='" . $_SESSION['userid'] . "' order by pmid DESC";
                             $resultpm = mysqli_query($conn, $querypm);
                             while ($rowpm = mysqli_fetch_assoc($resultpm)) {
                                 ?>

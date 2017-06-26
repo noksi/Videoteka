@@ -27,9 +27,12 @@
                         <br><br>
 
     <?php
+    $queryupdejt="update pm set pm.`read`='read' where pm.pmid='".$_GET['pmid']."'";
+    $resultupdate=mysqli_query($conn, $queryupdejt);
     $querypm = "select * from pm inner join login on login.userid=pm.otheruserid where pm.userid='".$_SESSION['userid']."' and pmid='".$_GET['pmid']."'";
     $resultpm = mysqli_query($conn, $querypm);
     while ($rowpm = mysqli_fetch_assoc($resultpm)) {
+        
         ?>
                             <li class="pmfolder" style="padding-top: 3px; padding-bottom: 3px;">
                                 <input type="hidden" name="hiddenpmid" value="<?php echo $rowpm['pmid']; ?>">

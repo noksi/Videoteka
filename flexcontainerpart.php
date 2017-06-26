@@ -31,7 +31,15 @@
                 Prijavljeni ste kao [<?php
                 echo $rowavatar['username'];
             }
-            ?>]<br> <a href="pmfolder.php" class="glyphicon glyphicon-envelope posta" title="Sandučić"></a> Imate novih poruka: [0]<br>
+            ?>]<br> 
+            
+            <?php 
+            
+
+            
+            ?>
+            
+           <a href="pmfolder.php" class="glyphicon glyphicon-envelope posta" title="Sandučić"></a> Imate novih poruka:<br>
 
             <a href="" class="glyphicon glyphicon-user user" title="Profil [<?php echo $_SESSION['username']; ?>]"></a>
             Uredite svoj profil <br>
