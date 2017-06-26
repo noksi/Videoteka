@@ -390,6 +390,17 @@ left:25%;
     
 }
 
+.glifinbox {
+    
+    text-decoration: none;
+    margin-left: 5px;
+    padding: 2px;
+    border-radius: 2px;
+    padding-left:3px;
+    background-color: teal !important;
+         color: powderblue !important;
+         font-size: 120% !important;
+}
 
 
 .korisni2 a {
