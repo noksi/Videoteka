@@ -21,7 +21,7 @@
 
                         <label for="deletepm" class="glyphicon glyphicon-trash pmglif" title="Obriši označene poruke"></label>
                         <input name="deletepm" id="deletepm" type="submit" style="opacity: 0; width: 0.1px; height: 0.1px;  overflow: hidden; position: absolute;  z-index: -1;">
-                        <a href="#" class="glyphicon glyphicon-pencil pmglifnew" title="Nova poruka"></a>
+                        <a href="newpm.php" class="glyphicon glyphicon-pencil pmglifnew" title="Nova poruka"></a>
                         <a href="pmfolder.php" class="glyphicon glyphicon-inbox pmglifinbox" title="Dolazne poruke"></a>
                         <a href="#" class="glyphicon glyphicon-send pmglifsend" title="Poslane poruke"></a>
                         <br><br>
