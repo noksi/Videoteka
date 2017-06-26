@@ -94,6 +94,98 @@ font-weight: bold;
      
  }
  
+ .pmglif {
+     
+     font-size: 170%;
+     border-radius: 4px;
+     margin-left:1px;
+     padding: 9px !important;
+     background-color: green !important;
+         color: lightgreen !important;
+         margin-top:10px;
+         margin-right:2px;
+        
+     
+     
+ }
+ 
+ .pmglif:hover {
+     
+     background-color: lightgreen !important;
+         color: green !important;
+         border: 2px solid green  !important;
+     
+ }
+ 
+  .pmglifnew {
+     
+     font-size: 170%;
+     border-radius: 4px;
+     margin-left:1px;
+     padding: 9px !important;
+     background-color: goldenrod!important;
+         color: papayawhip !important;
+         margin-top:10px;
+         margin-right:2px;
+        
+     
+     
+ }
+ 
+ .pmglifnew:hover {
+     
+     background-color: papayawhip !important;
+         color: goldenrod !important;
+         border: 2px solid goldenrod  !important;
+     
+ }
+ 
+  .pmglifinbox {
+     
+     font-size: 170%;
+     border-radius: 4px;
+     margin-left:1px;
+     padding: 9px !important;
+     background-color: orangered !important;
+         color: lightsalmon !important;
+         margin-top:10px;
+         margin-right:2px;
+        
+     
+     
+ }
+ 
+ .pmglifinbox:hover {
+     
+     background-color: lightsalmon !important;
+         color: orangered !important;
+         border: 2px solid orangered !important;
+     
+ }
+ 
+  .pmglifsend {
+     
+     font-size: 170%;
+     border-radius: 4px;
+     margin-left:1px;
+     padding: 9px !important;
+     background-color: indigo !important;
+         color: mediumorchid !important;
+         margin-top:10px;
+         margin-right:2px;
+        
+     
+     
+ }
+ 
+ .pmglifsend:hover {
+     
+     background-color: mediumorchid !important;
+         color: indigo !important;
+         border: 2px solid indigo  !important;
+     
+ }
+ 
   .user {
      
      font-size: 170%;
