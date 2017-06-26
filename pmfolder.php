@@ -34,7 +34,7 @@
                             <a href="#" class="pmfolder"><li class="tr" style="padding-top: 3px; padding-bottom: 3px;">
                                     Od: <span style="color:black; padding-left:10px; font-size: 80%; font-weight: bold;"><?php echo $rowpm['username']; ?></span> <br>
                                     Title: <span style="color:black; padding-left:10px; font-size: 80%; font-weight: normal;"><?php echo $rowpm['titlemsg']; ?></span><br>
-                                    Datum: <span style="color:black; padding-left:10px; font-size: 80%; font-weight: normal;"><?php echo $rowpm['datum']; ?></span> <input type="checkbox" name="checkdelete" value="<?php echo $rowpm['pmid']; ?>">
+                                    Datum: <span style="color:black; padding-left:10px; font-size: 80%; font-weight: normal;"><?php echo $rowpm['datum']; ?></span> <input type="checkbox" name="checkdelete[]" value="<?php echo $rowpm['pmid']; ?>">
                                 </li></a>  <?php } ?>
                     </ul>
                          
