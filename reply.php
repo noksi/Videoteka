@@ -6,7 +6,7 @@
 
     <body>
         <?php
-        if (isset($_SESSION['username'])) {
+        if (isset($_SESSION['username']) && $_SESSION['receiver'] && $_SESSION['title'] ) {
 
             include 'flexcontainerpart.php';
             include 'header.php';
@@ -17,7 +17,7 @@
                 <div class="tablahead">
                     <form method="POST" action="php/sendpm.php">
                     <ul class="pm" style="width:100%">
-                        <div class="caption tha" style="font-family: Play, sans-serif">Nova poruka</div>
+                        <div class="caption tha" style="font-family: Play, sans-serif">Odgovori na poruku od <?php echo $_SESSION['receiver']; ?></div>
 
                         
                         <a href="newpm.php" class="glyphicon glyphicon-pencil pmglifnew" title="Nova poruka"></a>
@@ -27,7 +27,7 @@
 
 
 
-            <input type="text" class="textareaforum" name="primateljpm" list="useri" autocomplete="off"><br>
+            <input type="text" class="textareaforum" name="primateljpm" list="useri" autocomplete="off" value="<?php echo $_SESSION['receiver']; ?>"><br>
             <datalist id="useri">
 <?php
 $query = "select * from login order by username ASC";
@@ -46,7 +46,7 @@ while ($row = mysqli_fetch_assoc($result)) {
        <form method="POST" action="php/addtext.php">
            
            Title:
-           <input type="text" name="naslovpm" class="textareaforum"><br><br>
+           <input type="text" name="naslovpm" class="textareaforum" value="<?php echo "RE: ".$_SESSION['title']; ?>"><br><br>
            
          Poruka:
            <textarea class="textareaforum" name="textpm" rows="8"></textarea>
@@ -71,7 +71,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
     <?php
 } else {
-    header('Location: index.php');
+    header('Location: pmfolder.php');
 }
 ?>
 
@@ -80,3 +80,10 @@ while ($row = mysqli_fetch_assoc($result)) {
     </body>
 
 </html>
+
+<?php 
+
+unset($_SESSION['title']);
+unset($_SESSION['receiver']);
+
+?>

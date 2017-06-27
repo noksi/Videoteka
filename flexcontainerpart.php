@@ -35,11 +35,15 @@
             
             <?php 
             
+           $querymsg="select count(pmid) as readmsg from pm where pm.`read`='0' and userid='".$_SESSION['userid']."'";
+           $resultmsg=mysqli_query($conn, $querymsg);
+           $rowmsg=mysqli_fetch_assoc($resultmsg);
+           
 
             
             ?>
             
-           <a href="pmfolder.php" class="glyphicon glyphicon-envelope posta" title="Sandučić"></a> Imate novih poruka:<br>
+            <a href="pmfolder.php" class="glyphicon glyphicon-envelope posta" title="Sandučić"></a> Imate novih poruka: [<?php echo $rowmsg['readmsg']; ?>]<br>
 
             <a href="" class="glyphicon glyphicon-user user" title="Profil [<?php echo $_SESSION['username']; ?>]"></a>
             Uredite svoj profil <br>

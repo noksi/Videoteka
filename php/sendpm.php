@@ -12,7 +12,10 @@ if (isset($_POST['posaljipm'])) {
     $query="insert into pm (userid, otheruserid, titlemsg, msg) values"
             . " ('".$rowselect['userid']."', '".$_SESSION['userid']."', '".$_POST['naslovpm']."', '".$_POST['textpm']."')";
     $result=mysqli_query($conn, $query);
-    if ($result) {header('Location: ../pmfolder.php');} 
+    $query2="insert into pmsent (userid, otheruserid, titlemsg, msg) values"
+            . " ('".$_SESSION['userid']."', '".$rowselect['userid']."', '".$_POST['naslovpm']."', '".$_POST['textpm']."')";
+    $result2=mysqli_query($conn, $query2);
+    if ($result && $result2) {header('Location: ../pmfolder.php');} 
     else {echo "Došlo je do greške, molimo Vas pokušajte ponovno";}
     } //end while
     
