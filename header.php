@@ -21,7 +21,7 @@
 
     <div class="mojnavbarformaindexdetails">
         <div class="navbar-title" style="font-family: Play, sans-serif !important;">
-            <span class="GHSdetails"> Broj korisnika: <strong style="margin-left:2px;"><?php echo $row['brojusera']; ?></strong></span>
+            <span class="GHSdetails"> Broj korisnika: <strong style="margin-left:3px;"><?php echo $row['brojusera']; ?></strong></span>
 
         </div> <!--navbar title-->
     </div> <!--mojnavbarformaindex-->
@@ -37,15 +37,18 @@
 
     <div class="mojnavbarformaindexdetails">
         <div class="navbar-title" style="font-family: Play, sans-serif !important;">
-            <span class="GHSdetails"> Broj postova: <strong style="margin-left:2px;"><?php echo $row2['brojukupnihpostova']; ?></strong></span>
+            <span class="GHSdetails"> Broj postova: <strong style="margin-left:3px;"><?php echo $row2['brojukupnihpostova']; ?></strong></span>
         </div> <!--navbar title-->
     </div> <!--mojnavbarformaindex-->
 
-   
-    
+    <?php
+   $query3="select username from login order by clanstvo desc limit 1";
+   $result3=mysqli_query($conn, $query3);
+   $row3=mysqli_fetch_assoc($result3);
+    ?>
     <div class="mojnavbarformaindexdetails">
         <div class="navbar-title" style="font-family: Play, sans-serif !important;">
-            <span class="GHSdetails"> Najnoviji korisnik: <strong style="margin-left:2px;"></strong></span>
+            <span class="GHSdetails"> Najnoviji korisnik: <strong style="margin-left:3px;"><?php echo $row3['username']; ?></strong></span>
         </div> <!--navbar title-->
     </div> <!--mojnavbarformaindex-->
 
