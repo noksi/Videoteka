@@ -15,7 +15,7 @@ include 'php/dbcon.php';
     $_SESSION['password']=$_POST['password'];
     
     
-    $query="select * from login where username='".$_SESSION['username']."' and password='".$_SESSION['password']."'";
+    $query="select * from login where username='".$_SESSION['username']."' and binary password='".$_SESSION['password']."'";
     $result=mysqli_query($conn, $query);
     $row=mysqli_fetch_assoc($result);
     $resulttest=mysqli_num_rows($result);

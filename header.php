@@ -8,14 +8,12 @@
 
 
     </div> <!--mojnavbarformaindex-->
-    
+
     <?php
-    
     include 'php/dbcon.php';
-    $query="select count(userid) as brojusera from login";
-    $result=mysqli_query($conn, $query);
-    $row=mysqli_fetch_assoc($result);
-    
+    $query = "select count(userid) as brojusera from login";
+    $result = mysqli_query($conn, $query);
+    $row = mysqli_fetch_assoc($result);
     ?>
 
 
@@ -26,14 +24,11 @@
         </div> <!--navbar title-->
     </div> <!--mojnavbarformaindex-->
 
-  <?php
-    
-    
-    $query2="select count(forumid) as brojukupnihpostova from forum";
-    $result2=mysqli_query($conn, $query2);
-    $row2=mysqli_fetch_assoc($result2);
-    
-    ?>
+<?php
+$query2 = "select count(forumid) as brojukupnihpostova from forum";
+$result2 = mysqli_query($conn, $query2);
+$row2 = mysqli_fetch_assoc($result2);
+?>
 
     <div class="mojnavbarformaindexdetails">
         <div class="navbar-title" style="font-family: Play, sans-serif !important;">
@@ -41,11 +36,11 @@
         </div> <!--navbar title-->
     </div> <!--mojnavbarformaindex-->
 
-    <?php
-   $query3="select username from login order by clanstvo desc limit 1";
-   $result3=mysqli_query($conn, $query3);
-   $row3=mysqli_fetch_assoc($result3);
-    ?>
+<?php
+$query3 = "select username from login order by clanstvo desc limit 1";
+$result3 = mysqli_query($conn, $query3);
+$row3 = mysqli_fetch_assoc($result3);
+?>
     <div class="mojnavbarformaindexdetails">
         <div class="navbar-title" style="font-family: Play, sans-serif !important;">
             <span class="GHSdetails"> Najnoviji korisnik: <strong style="margin-left:3px;"><?php echo $row3['username']; ?></strong></span>
