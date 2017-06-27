@@ -37,10 +37,10 @@
     </div> <!--mojnavbarformaindex-->
 
 
-    <div class="mojnavbarformaindexdetails">
+    <div class="mojnavbarformaindexdetails" title="About">
         <div style="font-family: Play, sans-serif !important; font-size:85%;">
             Coded and designed by:<br>
-            Goran Tolušić<br>
+            Goran Tolušić <br>
             Contact e-mail:<br>
             bimbo.klein696@gmail.com
         </div> <!--navbar title-->
