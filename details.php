@@ -41,10 +41,10 @@ $_SESSION['details']=$_GET['details'];
             <span style="color: black">
             <?php 
             
-            $querycount="select count(userid) as brojusera from forum where userid='".$row2['userid']."'";
+            $querycount="select count(userid) as brojpostova from forum where userid='".$row2['userid']."'";
             $resultcount=mysqli_query($conn, $querycount);
             $rowcount=mysqli_fetch_assoc($resultcount);
-            echo $rowcount['brojusera'];
+            echo $rowcount['brojpostova'];
             
             ?>
             </span>
