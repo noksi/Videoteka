@@ -14,6 +14,7 @@ $_SESSION['section'] = $index;
         if (isset($_SESSION['username'])) {
             include 'flexcontainerpart.php';
             include 'header.php';
+            include 'indexcontent.php';
         } else {
 
             include 'flexlogin.php';
