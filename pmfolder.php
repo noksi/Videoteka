@@ -8,8 +8,8 @@
         <?php
         if (isset($_SESSION['username'])) {
 
-            include 'flexcontainerpart.php';
-            include 'header.php';
+            include 'flexcontainerpart.php'; //sidebar
+            include 'header.php'; // header
             include 'php/dbcon.php'; //spajanje na bazu
             ?>
 
@@ -39,8 +39,8 @@
                         </ul>
 
                     </form>
-                </div>
-            </div>
+                </div> <!--tablaheaed-->
+            </div> <!--sadrzaj-->
 
 
 
