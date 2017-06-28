@@ -52,7 +52,7 @@ INSERT INTO `filmovi` (`filmid`, `naziv_filma`, `godina`, `zanr`, `redatelj`, `s
 -- Dumping structure for table videoteka.forum
 CREATE TABLE IF NOT EXISTS `forum` (
   `forumid` int(11) NOT NULL AUTO_INCREMENT,
-  `filmid` int(11) NOT NULL,
+  `filmid` int(11) DEFAULT NULL,
   `userid` int(11) NOT NULL,
   `post` text NOT NULL,
   `datum` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -61,13 +61,15 @@ CREATE TABLE IF NOT EXISTS `forum` (
   KEY `FK_forum_login` (`userid`),
   CONSTRAINT `FK_forum_filmovi` FOREIGN KEY (`filmid`) REFERENCES `filmovi` (`filmid`),
   CONSTRAINT `FK_forum_login` FOREIGN KEY (`userid`) REFERENCES `login` (`userid`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
--- Dumping data for table videoteka.forum: ~2 rows (approximately)
+-- Dumping data for table videoteka.forum: ~4 rows (approximately)
 /*!40000 ALTER TABLE `forum` DISABLE KEYS */;
 INSERT INTO `forum` (`forumid`, `filmid`, `userid`, `post`, `datum`) VALUES
 	(1, 15, 7, 'asasassasghfhf', '2017-06-27 03:35:48'),
-	(2, 15, 7, 'ghghggghg', '2017-06-27 03:36:00');
+	(2, 15, 7, 'test 12 3', '2017-06-28 19:38:27'),
+	(3, 15, 7, 'ovo je testanje i jpš jedan test', '2017-06-28 19:38:16'),
+	(5, 16, 8, 'testanje', '2017-06-28 19:59:31');
 /*!40000 ALTER TABLE `forum` ENABLE KEYS */;
 
 -- Dumping structure for table videoteka.login
@@ -80,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `login` (
   `clanstvo` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`userid`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- Dumping data for table videoteka.login: ~2 rows (approximately)
 /*!40000 ALTER TABLE `login` DISABLE KEYS */;
@@ -104,14 +106,13 @@ CREATE TABLE IF NOT EXISTS `pm` (
   KEY `read` (`read`),
   CONSTRAINT `FK_pm_login` FOREIGN KEY (`userid`) REFERENCES `login` (`userid`),
   CONSTRAINT `FK_pm_login_2` FOREIGN KEY (`otheruserid`) REFERENCES `login` (`userid`)
-) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
--- Dumping data for table videoteka.pm: ~7 rows (approximately)
+-- Dumping data for table videoteka.pm: ~2 rows (approximately)
 /*!40000 ALTER TABLE `pm` DISABLE KEYS */;
 INSERT INTO `pm` (`pmid`, `userid`, `otheruserid`, `titlemsg`, `msg`, `read`, `datum`) VALUES
-	(43, 8, 7, 'asas', 'asas', '0', '2017-06-27 03:06:24'),
-	(46, 7, 7, 'naslov', 'test', '0', '2017-06-27 15:10:17'),
-	(47, 7, 7, 'još jedan test', 'evo nešta nešta nešta', 'read', '2017-06-27 15:11:17');
+	(1, 7, 7, 'naslov', 'test', 'read', '2017-06-28 12:53:32'),
+	(2, 8, 7, 'naslov', 'poruka', 'read', '2017-06-28 14:35:16');
 /*!40000 ALTER TABLE `pm` ENABLE KEYS */;
 
 -- Dumping structure for table videoteka.pmsent
@@ -127,18 +128,10 @@ CREATE TABLE IF NOT EXISTS `pmsent` (
   KEY `FK_pmsent_login_2` (`otheruserid`),
   CONSTRAINT `FK_pmsent_login` FOREIGN KEY (`userid`) REFERENCES `login` (`userid`),
   CONSTRAINT `FK_pmsent_login_2` FOREIGN KEY (`otheruserid`) REFERENCES `login` (`userid`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- Dumping data for table videoteka.pmsent: ~5 rows (approximately)
+-- Dumping data for table videoteka.pmsent: ~0 rows (approximately)
 /*!40000 ALTER TABLE `pmsent` DISABLE KEYS */;
-INSERT INTO `pmsent` (`pmid`, `userid`, `otheruserid`, `titlemsg`, `msg`, `datum`) VALUES
-	(8, 7, 8, 'test', 'testanje', '2017-06-27 02:31:06'),
-	(9, 8, 7, 'axel', 'axel', '2017-06-27 02:35:58'),
-	(10, 7, 8, 'asas', 'asas', '2017-06-27 03:06:24'),
-	(11, 7, 7, 'proba', 'dobro', '2017-06-27 03:07:04'),
-	(12, 7, 7, 'RE: axel', 'dfdfdfdf', '2017-06-27 03:13:55'),
-	(13, 7, 7, 'naslov', 'test', '2017-06-27 15:10:17'),
-	(14, 7, 7, 'još jedan test', 'evo nešta nešta nešta', '2017-06-27 15:10:31');
 /*!40000 ALTER TABLE `pmsent` ENABLE KEYS */;
 
 -- Dumping structure for table videoteka.userkolekcija
