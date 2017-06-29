@@ -1,4 +1,9 @@
-<?php session_Start(); ?>
+<?php session_Start(); 
+
+$movies='1';
+$_SESSION['section']=$movies;
+
+?>
 
 <!DOCTYPE html>
 <html>

@@ -1,4 +1,8 @@
 <?php session_Start();
+
+$movies='1';
+$_SESSION['section']=$movies;
+
 ?>
 
 

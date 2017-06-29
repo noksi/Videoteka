@@ -1,4 +1,10 @@
-<?php session_Start(); ?>
+<?php session_Start();
+
+$index = 0;
+$_SESSION['section'] = $index;
+
+?>
+
 
 <!DOCTYPE html>
 <html>
