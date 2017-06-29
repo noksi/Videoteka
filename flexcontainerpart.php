@@ -27,23 +27,20 @@
                     ?>
                     <img src="data:image/jpeg;base64,<?php echo base64_encode($rowavatar['avatar']); ?>" height="42" width="42" style="margin-right:2px !important; border-radius: 4px !important;">
 
-    <?php } ?>
+                <?php } ?>
                 Prijavljeni ste kao [<?php
                 echo $rowavatar['username'];
             }
             ?>]<br> 
-            
-            <?php 
-            
-           $querymsg="select count(pmid) as readmsg from pm where pm.`read`='0' and userid='".$_SESSION['userid']."'";
-           $resultmsg=mysqli_query($conn, $querymsg);
-           $rowmsg=mysqli_fetch_assoc($resultmsg);
-           
 
-            
+            <?php
+            $querymsg = "select count(pmid) as readmsg from pm where pm.`read`='0' and userid='" . $_SESSION['userid'] . "'";
+            $resultmsg = mysqli_query($conn, $querymsg);
+            $rowmsg = mysqli_fetch_assoc($resultmsg);
             ?>
-            
-            <a href="pmfolder.php" class="glyphicon glyphicon-envelope posta" title="Sandučić"></a> Imate novih poruka: [<?php echo $rowmsg['readmsg']; ?>]<br>
+
+            <a href="pmfolder.php" class="glyphicon glyphicon-envelope posta" title="Sandučić"></a>
+            <span class="<?php if ($rowmsg['readmsg'] > 0) { ?> pmblink <?php } ?>">Imate novih poruka: [<?php echo $rowmsg['readmsg']; ?>]</span><br>
 
             <a href="" class="glyphicon glyphicon-user user" title="Profil [<?php echo $_SESSION['username']; ?>]"></a>
             Uredite svoj profil <br>
@@ -80,19 +77,19 @@ while ($row = mysqli_fetch_assoc($result)) {
 
             <input type="text" class="form-control2" name="favoritiigre" list="igre" autocomplete="off">
             <datalist id="igre">
-                <?php
-                $queryigre = "select naziv_filma, godina from filmovi order by naziv_filma ASC";
-                $resultigre = mysqli_query($conn, $queryigre);
-                while ($rowigre = mysqli_fetch_assoc($resultigre)) {
-                    ?>
+<?php
+$queryigre = "select naziv_filma, godina from filmovi order by naziv_filma ASC";
+$resultigre = mysqli_query($conn, $queryigre);
+while ($rowigre = mysqli_fetch_assoc($resultigre)) {
+    ?>
 
                     <option value="<?php echo $rowigre['naziv_filma']; ?>"><?php echo $rowigre['naziv_filma'] . " " . $rowigre['godina']; ?></option> <?php } ?>
             </datalist><br>
             <input type="submit" name="dodajfavigre" value="Dodaj" class="btn btn-default butoni"><br><br><br>
 
-            <?php
-            if ($_SESSION['priv'] == 'admin' && $_SESSION['section'] == '1') {
-                ?>
+<?php
+if ($_SESSION['priv'] == 'admin' && $_SESSION['section'] == '1') {
+    ?>
 
                 <span><strong>Dodaj film u bazu podataka:</strong></span> <br><br>
 
@@ -132,7 +129,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
                 <input type="submit" name="add" class="btn btn-default butoni" value="Dodaj film"><br><br>
 
-            <?php } ?>
+<?php } ?>
 
         </form>
     </div> <!--korisni2-->

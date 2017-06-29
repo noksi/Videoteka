@@ -36,7 +36,11 @@ $_SESSION['section'] = $index;
                             while ($rowpm = mysqli_fetch_assoc($resultpm)) {
                                 ?>
                                 <li class="tr pmfolder" style="padding-top: 3px; padding-bottom: 3px;">
-                                        Od:  <span style="color:black; padding-left:10px; font-size: 80%; font-weight: bold;"><?php echo $rowpm['username']; ?><a href="readpm.php?pmid=<?php echo $rowpm['pmid']; ?>" class="glyphicon glyphicon-envelope glifinbox" title="Pročitajte poruku"></a></span><br>
+                                        Od:  <span style="color:black; padding-left:10px; font-size: 80%; font-weight: bold;">
+                                            <?php if ($rowpm['read']=='0') { ?><a href="readpm.php?pmid=<?php echo $rowpm['pmid']; ?>" class="glyphicon glyphicon-envelope glifinbox" title="Pročitajte poruku"></a> <?php } 
+                                                    else { ?><a href="readpm.php?pmid=<?php echo $rowpm['pmid']; ?>" class="glyphicon glyphicon-inbox glifinbox" style="background-color: red !important; color: lightsalmon !important;" title="Pročitajte poruku"></a> <?php } ?>
+                                             
+                                                <?php echo " ".$rowpm['username']; ?></span><br>
                                         Title: <span style="color:black; padding-left:10px; font-size: 80%; font-weight: normal;"><?php echo $rowpm['titlemsg']; ?></span><br>
                                         Datum: <span style="color:black; padding-left:10px; font-size: 80%; font-weight: normal;"><?php echo $rowpm['datum']; ?></span> 
                                     <input type="checkbox" name="checkdelete[]" value="<?php echo $rowpm['pmid']; ?>"></li>  <?php } ?>

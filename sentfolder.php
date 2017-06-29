@@ -37,7 +37,7 @@ $_SESSION['section'] = $index;
                             while ($rowpm = mysqli_fetch_assoc($resultpm)) {
                                 ?>
                                 <li class="tr pmfolder" style="padding-top: 3px; padding-bottom: 3px;">
-                                        Za:  <span style="color:black; padding-left:10px; font-size: 80%; font-weight: bold;"><?php echo $rowpm['username']; ?><a href="readpmsent.php?pmid=<?php echo $rowpm['pmid']; ?>" class="glyphicon glyphicon-envelope glifinbox" title="Pročitajte poruku"></a></span><br>
+                                        Za:  <span style="color:black; padding-left:10px; font-size: 80%; font-weight: bold;"><a href="readpmsent.php?pmid=<?php echo $rowpm['pmid']; ?>" class="glyphicon glyphicon-send glifinbox" style="background-color: indigo !important; color: mediumorchid !important;" title="Pročitajte poruku"></a><?php echo " ".$rowpm['username']; ?></span><br>
                                         Title: <span style="color:black; padding-left:10px; font-size: 80%; font-weight: normal;"><?php echo $rowpm['titlemsg']; ?></span><br>
                                         Datum: <span style="color:black; padding-left:10px; font-size: 80%; font-weight: normal;"><?php echo $rowpm['datum']; ?></span> 
                                     <input type="checkbox" name="checkdelete[]" value="<?php echo $rowpm['pmid']; ?>"></li>  <?php } ?>
