@@ -22,7 +22,7 @@ $_SESSION['section'] = $index;
                 if ($_SESSION['numrows'] == 0) {
                     ?>
                     <div class="sadrzaj">
-                        <div class="tablahead" style="text-align: center;"> <?php
+                        <div class="tablahead" style="text-align: center; font-family: Play, sans-serif !important;"> <?php
                     echo "Upisali ste pogrešno korisničko ime ili lozinku, molimo Vas da pokušate ponovno";
                     ?> </div> <!-- tablahead-->
                     </div> <!--sadrzaj-->
