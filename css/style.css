@@ -266,7 +266,7 @@ span {
 }
 
 .editpost{
-    
+
     font-size: 80%;
     font-weight: bold;
     color: #9d9d9d;
@@ -277,7 +277,7 @@ span {
 
     display: -webkit-flex;
     display: flex;
-    background-color: teal;
+    background-color: cadetblue;
     height:8%;
     position: relative;
     width:75%;
@@ -288,7 +288,7 @@ span {
     padding:10px;
     width:100%;
     height:auto;
-    background-color: teal;
+    background-color: cadetblue;
     display: -webkit-flex;
     display: flex;
 }
@@ -346,6 +346,37 @@ span {
     border: 2px solid teal;
     font-family: Play, sans-serif !important;
     display: flex;
+    -webkit-animation-name: logoheader;
+    -webkit-animation-duration: 1.8s; 
+    animation-name: logoheader;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+   
+}
+
+@-webkit-keyframes logoheader {
+    from {background-color: white;
+          color: #222;
+          border: 2px solid teal;
+    }
+    to {background-color: #222;
+        color: white;
+        border: 2px solid white;
+    }
+}
+
+
+@keyframes logoheader {
+    from {background-color: white;
+          color: #222;
+          border: 2px solid teal;
+    }
+    to {background-color: #222;
+        color: white;
+        border: 2px solid white;
+    }
 }
 
 .mojnavbarformaindexdetails {
@@ -528,12 +559,12 @@ span {
     padding:20px;
     text-align: center;
     margin-top: 12%;
-    
-   
+
+
 }
 
 .spanflexlogin {
-    
+
     font-size:420%;
     border:5px solid teal;
     border-radius:5px;
@@ -543,14 +574,44 @@ span {
     font-weight: bold;
     display:inline-block;
     width:auto;
-  
+    -webkit-animation-name: logo;
+    -webkit-animation-duration: 1.8s; 
+    animation-name: logo;
+    animation-duration: 1.8s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    
+
+}
+
+@-webkit-keyframes logo {
+    from {background-color: white;
+          color: #222;
+          font-size:420%;
+    }
+    to {background-color: #222;
+        color: white;
+        font-size:500%;
+   }
+}
+
+
+@keyframes logo {
+    from {background-color: white;
+          color: #222;
+          font-size:420%;
+    }
+    to {background-color: #222;
+        color: white;
+        font-size:500%;
+    }
 }
 
 .spanflexwelcome {
-    
+
     font-size:200%;
     font-family: Play, sans-serif;
-    
+
 }
 
 .tablahead {
