@@ -56,7 +56,7 @@ while ($row = mysqli_fetch_assoc($result)) {
          Poruka:
            <textarea class="textareaforum" name="textpm" rows="8"></textarea>
            
-           <input type="submit" name="posaljipm" value="Pošalji" class="btn btn-default" style="background: teal !important; color: white !important;">
+           <input type="submit" name="posaljipm" value="Pošalji" class="btn btn-default butoni" style="width: auto !important;">
            
        </form>
 
