@@ -568,13 +568,45 @@ span {
 }
 .butonnavbar {
 
-    width:20%;
+      opacity: 0; 
+    width: 0.1px; 
+    height: 0.1px; 
+    overflow: hidden;
+    position: absolute; 
+    z-index: -1;
 }
+
+
 
 .butonnavbar2 {
 
-    width: 15.9%;
+           opacity: 0; 
+    width: 0.1px; 
+    height: 0.1px; 
+    overflow: hidden;
+    position: absolute; 
+    z-index: -1;
 }
+
+.navsearch {
+    
+        font-weight: bold !important;
+       font-size: 85% !important;
+    border: 2px solid teal !important;
+    background-color: white !important;
+    color: #222 !important;
+        
+}
+
+.navsearch:hover {
+    
+    border: 2px solid white !important;
+    background-color: #222 !important;
+    color: white !important;
+        
+}
+
+
 
 .navbar-title {
 
@@ -791,7 +823,7 @@ td a:hover {
 
 .nazivfilma {
 
-    width:25%;
+    width:28.2%;
 }
 
 .file{

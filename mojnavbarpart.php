@@ -1,8 +1,11 @@
 <div class="mojnavbar">
 
+     
+                 
+    
  <form class="mojnavbarforma" method="POST" action="search.php">
- 	<div class="navbar-title">Tražite film po slovu:</div>
-        <select class="form-control3" name="slova">
+     <div class="navbar-title">Tražite film po slovu:</div>
+        <select class="form-control3" name="slova" style="width: 11.4%;">
         
   <option value="A">A</option>
   <option value="B">B</option>
@@ -36,13 +39,15 @@
   <option value="Š">Š</option>
   
   </select>
-<input type="submit" name="trazislovo" class="btn btn-default butonnavbar" value="Traži">
+        <label for="trazislovo" class="glyphicon glyphicon-search navsearch" title="Traži film po slovu"></label>
+<input type="submit" name="trazislovo" id="trazislovo" class="btn btn-default butonnavbar" value="Traži">
 
 
-<div class="navbar-title navbar-title2">Upišite naziv filma:</div> 
+<div class="navbar-title navbar-title2" style="margin-left: 10%">Upišite naziv filma:</div> 
 
 <input type="text" name="filmovi" placeholder="Naziv filma" class="form-control3 nazivfilma">
-<input type="submit" name="trazilica" class="btn btn-default butonnavbar" value="Traži">
+<label for="trazilica" class="glyphicon glyphicon-search navsearch" title="Traži film"></label>
+<input type="submit" name="trazilica" id="trazilica" class="btn btn-default butonnavbar" value="Traži">
  </form>
  
 	
@@ -51,7 +56,7 @@
         <div class="mojnavbar2">
 
  <form class="mojnavbarforma2" method="POST" action="search.php">
- 	<div class="navbar-title">Tražite film po žanru:</div>
+     <div class="navbar-title">Tražite film po žanru:</div>
         
         <select class="form-control3" name="zanr">
             
@@ -67,13 +72,15 @@
         
         </select>
         
-<input type="submit" name="trazizanr" class="btn btn-default butonnavbar2" value="Traži" style="width: 13.7%">
+        <label for="trazizanr" class="glyphicon glyphicon-search navsearch" title="Traži film po žanru"></label>
+<input type="submit" name="trazizanr" id="trazizanr" class="btn btn-default butonnavbar2" value="Traži" style="width: 13.7%">
 
 
-<div class="navbar-title navbar-title2">Upišite godinu izdavanja:</div> 
+<div class="navbar-title navbar-title2" style="margin-left: 10%">Upišite godinu izdavanja:</div> 
 
-<input type="number" name="godina" placeholder="Godina izdavanja filma" class="form-control3 nazivfilma">
-<input type="submit" name="trazigodina" class="btn btn-default butonnavbar2" value="Traži">
+<input type="number" name="godina" placeholder="Godina izdavanja filma" class="form-control3" style="width: 24.1%;">
+<label for="trazigodina" class="glyphicon glyphicon-search navsearch" title="Traži film po godini"></label>
+<input type="submit" name="trazigodina" id="trazigodina" class="btn btn-default butonnavbar2" value="Traži">
  </form>
  
 	
