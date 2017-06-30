@@ -67,9 +67,9 @@ $_SESSION['section']=$movies;
                                     if ($_SESSION['priv'] == 'admin' or $_SESSION['userid'] == $row2['userid']) {
                                         ?>
 
-                                        <a href='editpost.php?ideditpost=<?php echo $row2['forumid']; ?>'><input type='submit' name='edit' class="btn btn-default butoni" value='Promjeni' style="background: teal !important; color: white !important;"></a><br>
+                                        <a href='editpost.php?ideditpost=<?php echo $row2['forumid']; ?>'><input type='submit' name='edit' class="btn btn-default butoni" value='Promjeni' ></a><br>
 
-                                        <a href='php/removepost.php?forumidremove=<?php echo $row2['forumid']; ?>'><input type='submit' name='removepost' class="btn btn-default butoni" value='Ukloni' style="background: teal !important; color: white !important;"></a>
+                                        <a href='php/removepost.php?forumidremove=<?php echo $row2['forumid']; ?>'><input type='submit' name='removepost' class="btn btn-default butoni" value='Ukloni'></a>
 
             <?php } ?>
                                 </td>
@@ -95,7 +95,7 @@ $_SESSION['section']=$movies;
 
                         <textarea class="textareaforum" name="text" rows="8"></textarea>
 
-                        <input type="submit" name="komentar" value="Komentiraj" class="btn btn-default" style="background: teal !important; color: white !important;">
+                        <input type="submit" name="komentar" value="Komentiraj" class="btn btn-default butoni" style="width: auto !important;">
 
                     </form>
 

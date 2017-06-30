@@ -553,9 +553,19 @@ span {
 
 .butoni {
     width:100%;
+    background: teal !important; 
+    color: white !important;
+    font-weight: normal !important;
 
 }
 
+.butoni:hover {
+    
+    background: white!important; 
+    color: teal !important;
+    border: 1px solid teal !important;
+    
+}
 .butonnavbar {
 
     width:20%;
