@@ -4,11 +4,11 @@
 
     <div class="korisni2">
 
-        <a href="index.php" class="glyphicon glyphicon-home glif" title="Početna stranica"></a>
-        <a href="movies.php" class="glyphicon glyphicon-film glif" title="Filmovi"></a>
-        <a href="index.php" class="glyphicon glyphicon-cd glif" title="Igre"></a>
-        <a href="index.php" class="glyphicon glyphicon-user glif" title="Popis korisnika"></a>
-        <a href="index.php" class="glyphicon glyphicon-comment glif" title="Chat"></a>
+        <a href="index.php" class="fa fa-home glif" title="Početna stranica"></a>
+        <a href="movies.php" class="fa fa-video-camera glif" title="Filmovi"></a>
+        <a href="index.php" class="fa fa-gamepad glif" title="Igre"></a>
+        <a href="index.php" class="fa fa-user-circle glif" title="Popis korisnika"></a>
+        <a href="index.php" class="fa fa-wechat glif" title="Chat"></a>
         <br><br>
 
         <?php
