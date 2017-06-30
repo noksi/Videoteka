@@ -6,9 +6,9 @@
 <tr>
 	
 
-<th>Naziv filma</th>
-<th>Video</th>
-<th>Cover</th>
+<th></th>
+<th></th>
+<th></th>
 
 
 </tr>
@@ -28,7 +28,7 @@ include 'php/dbcon.php';
          
         
         <td><?php echo $row['naziv_filma']; ?></td>
-        <td><iframe width="490" height="320" src="https://www.youtube.com/embed/<?php echo $row['video']; ?>"></iframe>
+        <td style="padding-left: 10px;"><iframe width="490" height="320" src="https://www.youtube.com/embed/<?php echo $row['video']; ?>"></iframe>
         </td>
 
 	

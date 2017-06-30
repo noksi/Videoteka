@@ -15,7 +15,10 @@
                         <input class="form-control2" type="text" name="korisnik"><br>
 
                         <span><strong style="color: #222">Unesite željenu lozinku:</strong></span><br>
-                        <input class="form-control2" type="password" name="lozinka"><br><br>
+                        <input class="form-control2" type="password" name="lozinka"><br>
+                        
+                        <span><strong style="color: #222">Ponovite lozinku:</strong></span><br>
+                        <input class="form-control2" type="password" name="lozinkarepeat"><br><br>
 
                         <span><strong style="color: #222">Odaberite vašu profilnu sličicu:</strong></span>
                         <input type="file" class="file" name="profilnaslika" id="profilnaslika">
