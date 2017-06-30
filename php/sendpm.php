@@ -7,6 +7,7 @@ if (isset($_POST['posaljipm'])) {
     
     $select="select userid from login where username='".$_POST['primateljpm']."'";
     $resultselect=mysqli_query($conn, $select);
+    if (mysqli_num_rows($resultselect)==1) {
     while ($rowselect=mysqli_fetch_assoc($resultselect)){
     
     $query="insert into pm (userid, otheruserid, titlemsg, msg) values"
@@ -18,6 +19,7 @@ if (isset($_POST['posaljipm'])) {
     if ($result && $result2) {header('Location: ../pmfolder.php');} 
     else {echo "Došlo je do greške, molimo Vas pokušajte ponovno";}
     } //end while
-    
+    } // end num rows
+    else {echo "Ne postoji korisnik s tim imenom";}
 } // end if
 else {header('Location: ../index.php');}

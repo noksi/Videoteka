@@ -49,8 +49,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
      
  
-       <form method="POST" action="php/addtext.php">
-           
+                 
            Title:
            <input type="text" name="naslovpm" class="textareaforum"><br><br>
            
@@ -59,7 +58,7 @@ while ($row = mysqli_fetch_assoc($result)) {
            
            <input type="submit" name="posaljipm" value="Pošalji" class="btn btn-default butoni" style="width: auto !important;">
            
-       </form>
+          
 
 
 

@@ -28,9 +28,9 @@ include 'php/dbcon.php';
          
         
      <td><?php echo $row['naziv_filma']; ?><br><br>
-         <a href="<?php echo $row['fb']; ?>" class="fa fa-facebook-square detailfbglif" title="Posjeti <?php echo $row['naziv_filma']; ?> na facebook stranici" target="blank"></a><br><br>
-         <a href="<?php echo $row['imdb']; ?>" class="fa fa-imdb detailimdbglif" title="Posjeti <?php echo $row['naziv_filma']; ?> na IMDB stranici" target="blank"></a><br><br>
-         <a href="<?php echo $row['wiki']; ?>" class="fa fa-wikipedia-w detailwikiglif" title="Posjeti <?php echo $row['naziv_filma']; ?> na IMDB stranici" target="blank"></a><br><br>
+         <a href="<?php echo $row['fb']; ?>" class="fa fa-facebook-square detailfbglif" title="Posjeti <?php echo $row['naziv_filma']; ?> na facebook stranici" target="_blank"></a><br><br>
+         <a href="<?php echo $row['imdb']; ?>" class="fa fa-imdb detailimdbglif" title="Posjeti <?php echo $row['naziv_filma']; ?> na IMDB stranici" target="_blank"></a><br><br>
+         <a href="<?php echo $row['wiki']; ?>" class="fa fa-wikipedia-w detailwikiglif" title="Posjeti <?php echo $row['naziv_filma']; ?> na IMDB stranici" target="_blank"></a><br><br>
                 </td>
         
         <td style="padding-left: 10px;"><iframe width="490" height="320" src="https://www.youtube.com/embed/<?php echo $row['video']; ?>"></iframe>
