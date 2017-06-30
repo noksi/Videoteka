@@ -6,11 +6,14 @@ include 'dbcon.php';
 if (isset($_POST['add'])) {
 $image=addslashes(file_get_contents($_FILES['slika']['tmp_name']));
 
-$query="insert into filmovi (naziv_filma, godina, zanr, redatelj, slike, video) values "
+$query="insert into filmovi (naziv_filma, godina, zanr, redatelj, imdb, wiki, fb, slike, video) values "
         . "('".$_POST['naziv']."',"
         . " '".$_POST['godina']."',"
         . " '".$_POST['zanrovi']."',"
         . " '".$_POST['redatelj']."',"
+        . " '".$_POST['imdb']."',"
+        . " '".$_POST['wiki']."',"
+        . " '".$_POST['fb']."',"
         . " '".$image."',"
         . " '".$_POST['video']."')";
 

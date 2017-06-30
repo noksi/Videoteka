@@ -83,7 +83,6 @@ span {
     margin-right:2px;
 
 
-
 }
 
 .posta:hover {
@@ -93,6 +92,65 @@ span {
     border: 2px solid teal !important;
 
 }
+
+.detailfbglif {
+    
+    text-decoration: none;
+    font-size:250%;
+    color: #3B5998;
+    }
+    
+
+.detailfbglif:hover {
+    
+    text-decoration: none;
+    font-size:250%;
+    color: #3B5998 !important;
+    }
+    
+    .detailimdbglif {
+    
+    text-decoration: none;
+    font-size:250%;
+    color: goldenrod;
+    }
+    
+
+.detailimdbglif:hover {
+    
+    text-decoration: none;
+    font-size:250%;
+    color: goldenrod !important;
+    }
+    
+        .detailwikiglif {
+    
+         padding: 2px;
+    padding-top: 5px;
+    padding-bottom:3px;
+    font-size: 150% !important;
+    text-decoration: none;
+    font-size:250%;
+    background-color: dimgrey !important;
+    border-radius: 4px;
+    color: white;
+    }
+    
+
+.detailwikiglif:hover {
+    
+    padding: 2px;
+    padding-top: 5px;
+    padding-bottom:3px;
+    font-size: 150% !important;
+    text-decoration: none;
+    font-size:250%;
+    background-color: dimgrey !important;
+    border-radius: 4px;
+    color: white;
+    }
+
+
 
 .pmblink {
     padding: 3px;

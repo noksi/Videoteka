@@ -115,7 +115,16 @@ if ($_SESSION['priv'] == 'admin' && $_SESSION['section'] == '1') {
 
                 <span>Redatelj:</span><br>
                 <input type="text" class="input form-control2" name="redatelj" style="color: black !important;" placeholder="Upiši naziv redatelja"><br>
+                
+                 <span>Imdb adresa:</span><br>
+                <input type="text" class="input form-control2" name="imdb" style="color: black !important;" placeholder="Unesi IMDB adresu filma"><br>
 
+                <span>Wikipedia adresa:</span><br>
+                <input type="text" class="input form-control2" name="wiki" style="color: black !important;" placeholder="Unesi wikipedia adresu filma"><br>
+                
+                <span>Facebook adresa:</span><br>
+                <input type="text" class="input form-control2" name="fb" style="color: black !important;" placeholder="Unesi FB adresu od filma"><br>
+                
                 <span>Unesite ID youtube videa:</span><br>
                 <input type="text" class="input form-control2" name="video" style="color: black !important;" placeholder="Upiši ID video trailera"><br>
 
